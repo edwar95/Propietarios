@@ -2,23 +2,23 @@
 MÓDULO FORMULARIOS:
   
   ENTRADAS:
-    1: Listado de solicitantes (Personas que pueden solicitar: profesores, rector, etc.)
+    1: Listado de solicitantes (Personas que pueden solicitar: profesores, rector, etc.)    <-- Módulo RRHH
       a: idSolicitante
       b: nombreSolicitante
       c: cedulaSolicitante
-    2: Listado destinos disponibles
+    2: Listado destinos disponibles  <-- Módulo Rutas
       a: idDestino
       b: nombreDestino
-    3: Listado conductores
+    3: Listado conductores      <-- Módulo RRHH
       a: idConductor
       b: cedulaConductor
       c: nombreConductor
-    4: Listado vehículos
+    4: Listado vehículos      <-- Módulo Vehículos
       a: idVehiculo
       b: numeroPlaca
   
   SALIDAS:
-    1: Solicitud de Viaje
+    1: Solicitud de Viaje     --> Módulo Reservas
       a: idSolicitud
       b: motivoViaje
       c: categoriaUsuario (prioridad de solicitante)
@@ -29,7 +29,7 @@ MÓDULO FORMULARIOS:
       h: fechaRetorno
       i: estadoSolicitud (Por defecto: "pendiente")
    
-   2: Historial de gasolina y kilometraje de vehículo
+   2: Historial de gasolina y kilometraje de vehículo   --> Módulo Reportes Estadísticos
       a: idVehiculo
       b: fechaRegistro
       c: cantidadGasolina
