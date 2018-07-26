@@ -1,0 +1,40 @@
+
+MÓDULO FORMULARIOS:
+  
+  ENTRADAS:
+    1: Listado de solicitantes (Personas que pueden solicitar: profesores, rector, etc.)
+      a: idSolicitante
+      b: nombreSolicitante
+      c: cedulaSolicitante
+    2: Listado destinos disponibles
+      a: idDestino
+      b: nombreDestino
+    3: Listado conductores
+      a: idConductor
+      b: cedulaConductor
+      c: nombreConductor
+    4: Listado vehículos
+      a: idVehiculo
+      b: numeroPlaca
+  
+  SALIDAS:
+    1: Solicitud de Viaje
+      a: idSolicitud
+      b: motivoViaje
+      c: categoriaUsuario (prioridad de solicitante)
+      d: idSolicitante
+      e: idDestino
+      f: numeroPersonas
+      g: fechaSalida
+      h: fechaRetorno
+      i: estadoSolicitud (Por defecto: "pendiente")
+   
+   2: Historial de gasolina y kilometraje de vehículo
+      a: idVehiculo
+      b: fechaRegistro
+      c: cantidadGasolina
+      d: kilometraje    
+      
+MÓDULO REPORTES ESTADÍSTICOS:
+  ENTRADAS:
+  SALIDAS:
