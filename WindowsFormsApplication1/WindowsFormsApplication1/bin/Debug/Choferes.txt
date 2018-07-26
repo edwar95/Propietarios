@@ -1,0 +1,5 @@
+David Morales;C
+Nombre Apellido;B
+Nombre2 Apellido2;C
+Nombre3 Apellido3;B
+Nombre4 Apellido4;B
