@@ -1,4 +1,6 @@
 
+
+-------------------------------------------------------------------------------------------------------
 MÓDULO FORMULARIOS:
   
   ENTRADAS:
@@ -34,7 +36,30 @@ MÓDULO FORMULARIOS:
       b: fechaRegistro
       c: cantidadGasolina
       d: kilometraje    
-      
+----------------------------------------------------------------------------------------------------      
+
 MÓDULO REPORTES ESTADÍSTICOS:
   ENTRADAS:
+    1: Viajes Realizados    <-- Módulo Reservas
+      a: idSolicitud
+      d: idSolicitante
+      e: idDestino
+      f: numeroPersonas
+      g: fechaSalida
+      h: fechaRetorno
+      i: estadoSolicitud (Tomado en cuenta si se tiene como: "aprobadoYRealizado")
+     
+     2: Historial de gasolina y kilometraje de vehículo   <-- Módulo Formularios
+      a: idVehiculo
+      b: fechaRegistro
+      c: cantidadGasolina
+      d: kilometraje
+      
+     3: Listado de solicitantes (Personas que pueden solicitar: profesores, rector, etc.)    <-- Módulo RRHH
+      a: idSolicitante
+      b: nombreSolicitante
+      c: cedulaSolicitante 
+      
   SALIDAS:
+    N/A: No se almacena información en la base de datos, los reportes se presentan en gráficos y tablas al usuario,
+    el usuario decide si imprimir, guardar como pdf, etc.
