@@ -10,10 +10,14 @@ namespace WindowsFormsApplication1
 {
     class Reserva
     {
+
+        private int idReserva;
+        private int idMotivoViaje;
+        private int idCategoriaUsuario;//categoria usuario
         private int numeroPersonas;
-        private string prioridad;
         private string fechaInicio;
         private string fechaFin;
+        private string estado;
         
         
 
@@ -30,18 +34,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        public string Prioridad
-        {
-            get
-            {
-                return prioridad;
-            }
-
-            set
-            {
-                prioridad = value;
-            }
-        }
+        
 
         public string FechaInicio
         {
@@ -66,6 +59,58 @@ namespace WindowsFormsApplication1
             set
             {
                 fechaFin = value;
+            }
+        }
+
+        public string Estado
+        {
+            get
+            {
+                return estado;
+            }
+
+            set
+            {
+                estado = value;
+            }
+        }
+
+        public int IdReserva
+        {
+            get
+            {
+                return idReserva;
+            }
+
+            set
+            {
+                idReserva = value;
+            }
+        }
+
+        public int IdMotivoViaje
+        {
+            get
+            {
+                return idMotivoViaje;
+            }
+
+            set
+            {
+                idMotivoViaje = value;
+            }
+        }
+
+        public int IdCategoriaUsuario
+        {
+            get
+            {
+                return idCategoriaUsuario;
+            }
+
+            set
+            {
+                idCategoriaUsuario = value;
             }
         }
 

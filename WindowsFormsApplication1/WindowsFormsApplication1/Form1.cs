@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -13,14 +14,16 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        Reserva reservaAux = new Reserva();   
-        bool exiteReserva = false;
-        String[] reservaTemp = null;
+        Reserva reserva;
+        ConexionSQL coneccion;
+
         
         public Form1()
         {
             InitializeComponent();
             confirmarBtn.Enabled = false;
+            coneccion = new ConexionSQL();
+            reserva= new Reserva();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,59 +38,70 @@ namespace WindowsFormsApplication1
 
         private void reservacion_Click(object sender, EventArgs e)
         {
+            
 
-            Reserva reserva = new Reserva();
-            foreach (string line in File.ReadLines(@"reservas.txt"))
+            coneccion.Conectar();
+            SqlCommand cmd = new SqlCommand("select * from SolicitudReserva WHERE idSolicitudReserva ="+ numReservaTxt.Text+"and estadoSolicitud = 'en espera'", coneccion.getConnection());
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
             {
-                Char delimiter =';';
-                String[] substrings = line.Split(delimiter);
-                if (numReservaTxt.Text== substrings[0])
+                while (reader.Read())
                 {
-                    exiteReserva = true;
-                    reservaTemp = substrings;
+                    reserva.IdReserva = reader.GetInt32(0);
+                    numReservaTxt.Text = reserva.IdReserva.ToString();
+
+                    reserva.NumeroPersonas = reader.GetInt32(5);
+                    numPersonas.Value = reserva.NumeroPersonas;
+
+                    reserva.IdMotivoViaje = reader.GetInt32(1);
+                    motivoViajeTxt.Text = reserva.IdMotivoViaje.ToString();
+
+                    reserva.IdCategoriaUsuario = reader.GetInt32(2);
+                    tipoUsr.Text = reserva.IdCategoriaUsuario.ToString();
+
+                    reserva.FechaInicio = reader.GetDateTime(6).ToString();
+                    fechaIni.Value = Convert.ToDateTime(reserva.FechaInicio);
+
+                    reserva.FechaFin = reader.GetDateTime(7).ToString();
+                    fechaFinaliza.Value = Convert.ToDateTime(reserva.FechaFin);
+
+                    reserva.Estado = reader.GetString(8);
+
+                    confirmarBtn.Enabled = true;
                 }
-            }
 
-            if (exiteReserva==true)
-            {
-                numPersonas.Value = Int32.Parse(reservaTemp[1]);
-                tipoUsr.Text = reservaTemp[2];
-                fechaIni.Value = Convert.ToDateTime(reservaTemp[3]);
-                fechaFinaliza.Value= Convert.ToDateTime(reservaTemp[4]);
-
-                confirmarBtn.Enabled = true;
-                reservaAux = reserva;
-                
             }
             else
             {
-
-                MessageBox.Show("No existe reserva", "Error Reserva",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No existe reserva", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 numPersonas.Value = 0;
-
                 confirmarBtn.Enabled = false;
             }
+            coneccion.Desconectar();
 
         }
 
         private void confirmarBtn_Click(object sender, EventArgs e)
         {
-            Reserva reserva = new Reserva();
-            reserva = reservaAux;
-            reserva.NumeroPersonas = Decimal.ToInt32(numPersonas.Value);
-            if (tipoUsr.Text == "Usuario Comun")
-            {
-                reserva.Prioridad = "1";
-            }
-            else
-            {
-                reserva.Prioridad = "2";
-            }
-            reserva.FechaInicio = fechaIni.Value.ToString("yyyy-MM-dd");
-            reserva.FechaFin = fechaFinaliza.Value.ToString("yyyy-MM-dd");
+
+            coneccion.Conectar();
+            SqlCommand cmd = new SqlCommand("UPDATE SolicitudReserva SET estadoSolicitud= 'aprobado' WHERE idSolicitudReserva="+reserva.IdReserva, coneccion.getConnection());
+            cmd.ExecuteNonQuery();
+            coneccion.Desconectar();
+
             reserva.confirmarViaje();
-              
+
+            numReservaTxt.Clear();
+            numPersonas.Value = 0;
+            motivoViajeTxt.Clear();
+            tipoUsr.Clear();
+            fechaIni.Value = DateTime.Today;
+            fechaFinaliza.Value = DateTime.Today;
+            
+
         }
+
+      
     }
 }
