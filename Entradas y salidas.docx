@@ -1,4 +1,4 @@
-
+﻿
 
 -------------------------------------------------------------------------------------------------------
 MÓDULO FORMULARIOS:
@@ -63,3 +63,33 @@ MÓDULO REPORTES ESTADÍSTICOS:
   SALIDAS:
     N/A: No se almacena información en la base de datos, los reportes se presentan en gráficos y tablas al usuario,
     el usuario decide si imprimir, guardar como pdf, etc.
+
+-------------------------------------------------------------------------------------------------------
+MÓDULO RESERVAS:
+  
+  ENTRADAS:
+     1: Solicitud de Viaje     --> Módulo Reservas
+      a: idSolicitud
+      b: motivoViaje
+      c: categoriaUsuario (prioridad de solicitante)
+      d: idSolicitante
+      e: idDestino
+      f: numeroPersonas
+      g: fechaSalida
+      h: fechaRetorno
+      i: estadoSolicitud (Por defecto: "pendiente")
+     
+     2: Lista de vehículos <-- Módulo Vehículos
+ 	a: Tipo de veículo
+	b: Placa
+	c: Capacidad
+
+     3: Lista de Choferes <-- Módulo Choferes o  Módulo de Personal
+	a: Nombres
+	b: Apellidos
+	c: Tipo de Licencia
+	
+
+	
+
+
