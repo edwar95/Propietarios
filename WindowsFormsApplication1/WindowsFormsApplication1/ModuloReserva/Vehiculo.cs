@@ -8,8 +8,22 @@ namespace WindowsFormsApplication1
 {
     class Vehiculo
     {
+        private int idVehiculo;
         private string placa;
         private string tipo;
+
+        public int IdVehiculo
+        {
+            get
+            {
+                return idVehiculo;
+            }
+
+            set
+            {
+                idVehiculo = value;
+            }
+        }
 
         public string Placa
         {

@@ -60,10 +60,10 @@ namespace WindowsFormsApplication1
                     reserva.IdCategoriaUsuario = reader.GetInt32(2);
                     tipoUsr.Text = reserva.IdCategoriaUsuario.ToString();
 
-                    reserva.FechaInicio = reader.GetDateTime(6).ToString();
+                    reserva.FechaInicio = reader.GetDateTime(6).ToString("yyyy.MM.dd");
                     fechaIni.Value = Convert.ToDateTime(reserva.FechaInicio);
 
-                    reserva.FechaFin = reader.GetDateTime(7).ToString();
+                    reserva.FechaFin = reader.GetDateTime(7).ToString("yyyy.MM.dd");
                     fechaFinaliza.Value = Convert.ToDateTime(reserva.FechaFin);
 
                     reserva.Estado = reader.GetString(8);
@@ -86,12 +86,24 @@ namespace WindowsFormsApplication1
         {
 
             coneccion.Conectar();
-            SqlCommand cmd = new SqlCommand("UPDATE SolicitudReserva SET estadoSolicitud= 'aprobado' WHERE idSolicitudReserva="+reserva.IdReserva, coneccion.getConnection());
-            cmd.ExecuteNonQuery();
-            coneccion.Desconectar();
-
-            reserva.confirmarViaje();
-
+            if (reserva.confirmarViaje())
+            {
+                reserva.Estado = "aprobado";
+                SqlCommand cmd = new SqlCommand("UPDATE SolicitudReserva SET estadoSolicitud= '"+reserva.Estado+"' WHERE idSolicitudReserva=" + reserva.IdReserva, coneccion.getConnection());
+                cmd.ExecuteNonQuery();
+                coneccion.Desconectar();
+            }
+            else
+            {
+                SqlCommand cmd = new SqlCommand("UPDATE SolicitudReserva SET estadoSolicitud= 'rechazado' WHERE idSolicitudReserva=" + reserva.IdReserva, coneccion.getConnection());
+                cmd.ExecuteNonQuery();
+                coneccion.Desconectar();
+                
+                Notificacion notificacion = new Notificacion();
+                notificacion.NotificacionReserva = "reserva realizada";
+                MessageBox.Show("Reserva rechazada", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
             numReservaTxt.Clear();
             numPersonas.Value = 0;
             motivoViajeTxt.Clear();
