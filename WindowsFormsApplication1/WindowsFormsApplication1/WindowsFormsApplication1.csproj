@@ -46,6 +46,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModuloFormularios\DataSetKilometraje.cs">
+      <DependentUpon>DataSetKilometraje.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloFormularios\DataSetKilometraje.Designer.cs">
+      <DependentUpon>DataSetKilometraje.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ModuloFormularios\DataSetViajes.Designer.cs">
+      <DependentUpon>DataSetViajes.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmCalificacionServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmCalificacionServicio.Designer.cs">
+      <DependentUpon>FrmCalificacionServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmHistorialKilometraje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmHistorialKilometraje.Designer.cs">
+      <DependentUpon>FrmHistorialKilometraje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmReporteConductor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmReporteConductor.Designer.cs">
+      <DependentUpon>FrmReporteConductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmReporteEstadistico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmReporteEstadistico.Designer.cs">
+      <DependentUpon>FrmReporteEstadistico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmSolicitudDeViaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmSolicitudDeViaje.Designer.cs">
+      <DependentUpon>FrmSolicitudDeViaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuloReserva\Calendario.cs" />
     <Compile Include="ModuloReserva\Chofer.cs" />
     <Compile Include="ModuloReserva\Fecha.cs" />
@@ -64,6 +107,23 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\FrmCalificacionServicio.resx">
+      <DependentUpon>FrmCalificacionServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\FrmHistorialKilometraje.resx">
+      <DependentUpon>FrmHistorialKilometraje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\FrmReporteConductor.resx">
+      <DependentUpon>FrmReporteConductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\FrmReporteEstadistico.resx">
+      <DependentUpon>FrmReporteEstadistico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\FrmSolicitudDeViaje.resx">
+      <DependentUpon>FrmSolicitudDeViaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\Report1.rdlc" />
+    <EmbeddedResource Include="ModuloFormularios\ReportKilometraje.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -73,6 +133,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ModuloFormularios\DataSetKilometraje.xsc">
+      <DependentUpon>DataSetKilometraje.xsd</DependentUpon>
+    </None>
+    <None Include="ModuloFormularios\DataSetKilometraje.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetKilometraje.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ModuloFormularios\DataSetKilometraje.xss">
+      <DependentUpon>DataSetKilometraje.xsd</DependentUpon>
+    </None>
+    <None Include="ModuloFormularios\DataSetViajes.xsc">
+      <DependentUpon>DataSetViajes.xsd</DependentUpon>
+    </None>
+    <None Include="ModuloFormularios\DataSetViajes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetViajes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ModuloFormularios\DataSetViajes.xss">
+      <DependentUpon>DataSetViajes.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -86,6 +168,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
