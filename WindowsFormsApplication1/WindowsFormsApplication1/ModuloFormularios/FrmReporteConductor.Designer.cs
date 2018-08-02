@@ -1,4 +1,4 @@
-﻿namespace ModulosG4
+﻿namespace ModuloFormularios
 {
     partial class Form2
     {

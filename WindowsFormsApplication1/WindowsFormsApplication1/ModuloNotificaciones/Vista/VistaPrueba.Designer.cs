@@ -1,4 +1,4 @@
-﻿namespace ModuloNotificaciones.Vista
+﻿namespace WindowsFormsApplication1
 {
     partial class VistaPrueba
     {

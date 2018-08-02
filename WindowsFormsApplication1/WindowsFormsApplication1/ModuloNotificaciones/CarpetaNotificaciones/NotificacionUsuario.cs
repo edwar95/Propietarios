@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Proyectov2.EnviarCorreo;
 
 
-namespace Proyectov2.CarpetaNotificaciones
+namespace WindowsFormsApplication1
 {
 
     

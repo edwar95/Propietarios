@@ -1,4 +1,4 @@
-﻿namespace ModulosG4
+﻿namespace ModuloFormularios
 {
     partial class FrmSolicitudDeViaje
     {
@@ -426,7 +426,6 @@
             this.buttonGuardar.Text = "Guardar";
             this.buttonGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonGuardar.UseVisualStyleBackColor = true;
-            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
             // groupBox2
             // 

@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Proyectov2.LeerArchivos;
 
 
 
-namespace Proyectov2.CarpetaSolicitud
+namespace WindowsFormsApplication1.CarpetaSolicitud
 {
     class Autorizacion
     {
         public Boolean estado = false;
         public String fecha_autorizacion;
-
-        Leerfichero learch = new Leerfichero();
+        
         LinkedList<string[]> list = new LinkedList<string[]>();
         string[] motivosValidos = { "Excursion", "Salida de campo", "Gira"};
         DateTime thisDay = DateTime.Today;
@@ -73,7 +71,6 @@ namespace Proyectov2.CarpetaSolicitud
                 auxiliar += fecha_autorizacion;
 
                 //se escribe la solicitud aprobada en el archivo de las aprobadas
-                learch.escribirArchivo(auxiliar, "Aprobadas.txt");
 
             }
 
@@ -93,7 +90,6 @@ namespace Proyectov2.CarpetaSolicitud
 
         public void autorizar()
         {
-            list=learch.leerA("Solicitud.txt");
           
             int i = 0;
             foreach(string[] a in list)
@@ -140,7 +136,6 @@ namespace Proyectov2.CarpetaSolicitud
                         }
 
                     }
-                    learch.escribirArchivo(auxiliar, "Aprobadas.txt");
                 }
                 
             }

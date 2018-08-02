@@ -7,11 +7,9 @@ using System.Collections.Generic;
 //using System.Text;
 //using System.Threading.Tasks;
 using System.Windows.Forms;
-using Proyectov2.CarpetaSolicitud;
 using System.Collections;
-using Proyectov2.CarpetaNotificaciones;
 
-namespace Proyectov2.Vista
+namespace WindowsFormsApplication1
 {
     public partial class Formulario : Form
     {
@@ -21,12 +19,7 @@ namespace Proyectov2.Vista
 
         
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // AGREGAR MÉTODO
-          
-       
-        }
+        
         private void actualizar(ArrayList rech)
         {
           

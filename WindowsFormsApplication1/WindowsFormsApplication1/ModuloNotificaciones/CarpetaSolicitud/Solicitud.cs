@@ -3,25 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using Proyectov2.Vista;
 using System.IO;
-using Proyectov2.LeerArchivos;
 using System.Windows.Forms;
-using Proyectov2.Patrón;
 
 namespace Proyectov2.CarpetaSolicitud
 {
     class Solicitud
     {
-
-        Leerfichero learch = new Leerfichero();
+        
 
         public Estado state;
         public String idSolicitud;
         public String destinatario="Autoridad";
         public bool aprobada = false;
-        Formulario formulario; //= new Formulario();
 
         public Solicitud()
         {
@@ -36,8 +30,6 @@ namespace Proyectov2.CarpetaSolicitud
         }
         public void listener()
         {
-            formulario = new Formulario();
-            formulario.ShowDialog();
            
         }
 
@@ -69,9 +61,6 @@ namespace Proyectov2.CarpetaSolicitud
 
         public void escribirSolicitd(string id, string remitente, string destino, string pasajeros, string motivo, string fsalida, string hsalida, string fsolicitud)
         {
-            learch.escribirArchivo(id+","+remitente + "," + destino+","+
-               pasajeros+","+motivo+","+fsalida+","+
-                hsalida+","+fsolicitud+","+"rechazada","Solicitud.txt");
         }
 
 
