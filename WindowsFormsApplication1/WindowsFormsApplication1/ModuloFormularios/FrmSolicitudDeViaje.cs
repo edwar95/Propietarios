@@ -35,6 +35,26 @@ namespace ModuloFormularios
                     comboBoxDestinos.Items.Add(new { Text = reader[1], Value = reader[0] });
                     
                 }
+                comboBoxDestinos.SelectedIndex = 0;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            conn = new SqlConnection(cnx.stringConexion);
+            try
+            {
+                conn.Open();
+                SqlCommand comando = new SqlCommand("SELECT idMotivoViaje, descripcion FROM dbo.MotivoViaje", conn);
+                reader = comando.ExecuteReader();
+                comboBoxMotivos.DisplayMember = "Text";
+                comboBoxMotivos.ValueMember = "Value";
+                while (reader.Read())
+                {
+                    comboBoxMotivos.Items.Add(new { Text = reader[1], Value = reader[0] });
+
+                }
+                comboBoxMotivos.SelectedIndex = 0;
 
             }
             catch (Exception e)
@@ -46,7 +66,16 @@ namespace ModuloFormularios
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(""+comboBoxDestinos.SelectedItem.GetType().GetProperty("Value").GetValue(comboBoxDestinos.SelectedItem));
+            try
+            {
+
+                MessageBox.Show("" + comboBoxDestinos.SelectedItem.GetType().GetProperty("Value").GetValue(comboBoxDestinos.SelectedItem));
+                MessageBox.Show("" + comboBoxMotivos.SelectedItem.GetType().GetProperty("Value").GetValue(comboBoxMotivos.SelectedItem));
+            }
+            catch(Exception er)
+            {
+                Console.WriteLine(er.ToString());
+            }
         }
     }
 }
