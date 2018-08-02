@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
 
-namespace Proyectov2.CarpetaSolicitud
+namespace WindowsFormsApplication1
 {
     class Solicitud
     {

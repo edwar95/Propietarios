@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseDeDatos\Conexion.cs" />
     <Compile Include="ModuloFormularios\Notificacion.cs" />
     <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionMantenimiento.cs" />
     <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionRuta.cs" />
