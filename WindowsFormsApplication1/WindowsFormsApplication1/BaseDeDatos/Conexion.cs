@@ -11,6 +11,9 @@ namespace WindowsFormsApplication1
     {
         public readonly String stringConexion = "Data Source=172.31.101.33,1433;Initial Catalog=sistemaAAP;User ID=sistemaAAP;Password=sistemaAAP";
         
-        
+        public Conexion()
+        {
+
+        }
     }
 }

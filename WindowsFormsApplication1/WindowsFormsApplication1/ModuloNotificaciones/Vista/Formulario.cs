@@ -64,9 +64,9 @@ namespace WindowsFormsApplication1
             NotificacionUsuario nu = new NotificacionUsuario();
             NotificacionUsuario nuser = new NotificacionUsuario();
             DateTime thisDay = DateTime.Today;
-            nu.fecha_envio = thisDay.ToString("dd/MM/yyyy");
+            //nu.fecha_envio = thisDay.ToString("dd/MM/yyyy");
 
-            MessageBox.Show(nu.enviarNotificacion());
+            //MessageBox.Show(nu.enviarNotificacion());
 
             nuser.NotificacionSolicitudAprobada("sofig.0106@gmail.com", "Solcitud", "Su solicitud fue aprobada.");
         }

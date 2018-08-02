@@ -44,7 +44,7 @@
             this.txt_nombreSolicitante = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.cb_destino = new System.Windows.Forms.ComboBox();
+            this.comboBoxDestinos = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
@@ -193,9 +193,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 18);
+            this.label1.Size = new System.Drawing.Size(140, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cédula del Solicitante:";
+            this.label1.Text = "Correo Institucional:";
             // 
             // txt_ciSolicitante
             // 
@@ -243,7 +243,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.cb_destino, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.comboBoxDestinos, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(5, 157);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -261,20 +261,14 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Destino:";
             // 
-            // cb_destino
+            // comboBoxDestinos
             // 
-            this.cb_destino.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cb_destino.FormattingEnabled = true;
-            this.cb_destino.Items.AddRange(new object[] {
-            "Latacunga",
-            "Cuenca",
-            "Loja",
-            "Manta",
-            "Guayaquil"});
-            this.cb_destino.Location = new System.Drawing.Point(288, 3);
-            this.cb_destino.Name = "cb_destino";
-            this.cb_destino.Size = new System.Drawing.Size(279, 26);
-            this.cb_destino.TabIndex = 1;
+            this.comboBoxDestinos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxDestinos.FormattingEnabled = true;
+            this.comboBoxDestinos.Location = new System.Drawing.Point(288, 3);
+            this.comboBoxDestinos.Name = "comboBoxDestinos";
+            this.comboBoxDestinos.Size = new System.Drawing.Size(279, 26);
+            this.comboBoxDestinos.TabIndex = 1;
             // 
             // tableLayoutPanel5
             // 
@@ -333,7 +327,6 @@
             this.dtf_salida.Name = "dtf_salida";
             this.dtf_salida.Size = new System.Drawing.Size(133, 24);
             this.dtf_salida.TabIndex = 0;
-            this.dtf_salida.ValueChanged += new System.EventHandler(this.dtf_salida_ValueChanged);
             // 
             // tableLayoutPanel7
             // 
@@ -426,6 +419,7 @@
             this.buttonGuardar.Text = "Guardar";
             this.buttonGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
             // groupBox2
             // 
@@ -497,7 +491,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_ciSolicitante;
         private System.Windows.Forms.TextBox txt_nombreSolicitante;
-        private System.Windows.Forms.ComboBox cb_destino;
+        private System.Windows.Forms.ComboBox comboBoxDestinos;
         private System.Windows.Forms.ComboBox cb_conductor;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
