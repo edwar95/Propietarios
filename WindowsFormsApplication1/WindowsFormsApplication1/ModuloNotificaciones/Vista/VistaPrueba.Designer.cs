@@ -1,4 +1,4 @@
-﻿namespace Proyectov2.Vista
+﻿namespace ModuloNotificaciones.Vista
 {
     partial class VistaPrueba
     {

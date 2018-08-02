@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyectov2.Vista
+namespace ModuloNotificaciones.Vista
 {
     public partial class VistaPrueba : Form
     {

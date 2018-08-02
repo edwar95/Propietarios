@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\Notificacion.cs" />
+    <Compile Include="ModuloFormularios\Notificacion.cs" />
     <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionMantenimiento.cs" />
     <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionRuta.cs" />
     <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionUsuario.cs" />
@@ -90,29 +90,11 @@
     <Compile Include="ModuloReserva\Reserva.cs" />
     <Compile Include="ModuloReserva\Vehiculo.cs" />
     <Compile Include="ModuloReserva\Viaje.cs" />
-    <Compile Include="ModuloNotificaciones\Vista\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModuloNotificaciones\Vista\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="ModuloNotificaciones\Vista\Formulario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModuloNotificaciones\Vista\Formulario.Designer.cs">
       <DependentUpon>Formulario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModuloNotificaciones\Vista\FrmSolicitudDeViaje.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModuloNotificaciones\Vista\FrmSolicitudDeViaje.Designer.cs">
-      <DependentUpon>FrmSolicitudDeViaje.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModuloNotificaciones\Vista\Modulo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModuloNotificaciones\Vista\Modulo.Designer.cs">
-      <DependentUpon>Modulo.cs</DependentUpon>
     </Compile>
     <Compile Include="ModuloNotificaciones\Vista\VistaPrueba.cs">
       <SubType>Form</SubType>
@@ -141,17 +123,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ModuloNotificaciones\Vista\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ModuloNotificaciones\Vista\Formulario.resx">
       <DependentUpon>Formulario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModuloNotificaciones\Vista\FrmSolicitudDeViaje.resx">
-      <DependentUpon>FrmSolicitudDeViaje.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModuloNotificaciones\Vista\Modulo.resx">
-      <DependentUpon>Modulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloNotificaciones\Vista\VistaPrueba.resx">
       <DependentUpon>VistaPrueba.cs</DependentUpon>
