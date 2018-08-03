@@ -51,13 +51,13 @@
             this.dth_salida = new System.Windows.Forms.DateTimePicker();
             this.dtf_salida = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonCancelar = new System.Windows.Forms.Button();
-            this.buttonGuardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxMotivos = new System.Windows.Forms.ComboBox();
+            this.buttonGuardar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -67,9 +67,9 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -109,6 +109,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.35713F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.36984F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.48494F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(580, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -246,6 +247,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(570, 46);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
@@ -279,6 +281,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(570, 46);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
@@ -337,49 +340,6 @@
             this.label7.Text = "SOLICITUD DE VIAJE";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // tableLayoutPanel8
-            // 
-            this.tableLayoutPanel8.ColumnCount = 2;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.buttonCancelar, 1, 0);
-            this.tableLayoutPanel8.Controls.Add(this.buttonGuardar, 0, 0);
-            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(5, 393);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(570, 52);
-            this.tableLayoutPanel8.TabIndex = 7;
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonCancelar.AutoSize = true;
-            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
-            this.buttonCancelar.Location = new System.Drawing.Point(368, 9);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(119, 33);
-            this.buttonCancelar.TabIndex = 2;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCancelar.UseVisualStyleBackColor = true;
-            // 
-            // buttonGuardar
-            // 
-            this.buttonGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonGuardar.AutoSize = true;
-            this.buttonGuardar.Image = ((System.Drawing.Image)(resources.GetObject("buttonGuardar.Image")));
-            this.buttonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGuardar.Location = new System.Drawing.Point(86, 9);
-            this.buttonGuardar.Name = "buttonGuardar";
-            this.buttonGuardar.Size = new System.Drawing.Size(112, 33);
-            this.buttonGuardar.TabIndex = 0;
-            this.buttonGuardar.Text = "Guardar";
-            this.buttonGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonGuardar.UseVisualStyleBackColor = true;
-            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.tableLayoutPanel11);
@@ -422,6 +382,49 @@
             this.comboBoxMotivos.Size = new System.Drawing.Size(279, 26);
             this.comboBoxMotivos.TabIndex = 1;
             // 
+            // buttonGuardar
+            // 
+            this.buttonGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonGuardar.AutoSize = true;
+            this.buttonGuardar.Image = ((System.Drawing.Image)(resources.GetObject("buttonGuardar.Image")));
+            this.buttonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGuardar.Location = new System.Drawing.Point(86, 9);
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.Size = new System.Drawing.Size(112, 33);
+            this.buttonGuardar.TabIndex = 0;
+            this.buttonGuardar.Text = "Guardar";
+            this.buttonGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCancelar.AutoSize = true;
+            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
+            this.buttonCancelar.Location = new System.Drawing.Point(368, 9);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(119, 33);
+            this.buttonCancelar.TabIndex = 2;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 2;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Controls.Add(this.buttonCancelar, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.buttonGuardar, 0, 0);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(5, 393);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(570, 52);
+            this.tableLayoutPanel8.TabIndex = 7;
+            // 
             // FrmSolicitudDeViaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,11 +448,11 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel8.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -472,9 +475,6 @@
         private System.Windows.Forms.TextBox txt_nombreSolicitante;
         private System.Windows.Forms.ComboBox comboBoxDestinos;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.DateTimePicker dth_llegada;
         private System.Windows.Forms.DateTimePicker dtf_llegada;
@@ -485,6 +485,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBoxMotivos;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.Button buttonGuardar;
     }
 }
 
