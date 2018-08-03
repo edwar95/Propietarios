@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Dijkstra.Program">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dijkstra.BinaryNode" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAABAAAAAAAEAAAA=</HashCode>
+      <FileName>Graph.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Dijkstra.Graph">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAASAABAAAAGQEAAIAAoAAAwAEAQABYAAIAAA=</HashCode>
+      <FileName>Graph.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dijkstra.Node" Collapsed="true">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAACAQAAgAAAAAAAAAAgAIAAAA=</HashCode>
+      <FileName>Graph.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dijkstra.Edge" Collapsed="true">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Graph.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dijkstra.FibonacciHeapNode&lt;T&gt;" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAIQIAAoAQSAQAAAAAQgACACAAEAAQAA=</HashCode>
+      <FileName>FibonacciHeap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dijkstra.FibonacciHeap&lt;T&gt;">
+    <Position X="5.25" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAJAABAAACAAAAAAEAAAABAAAQAECQAAQQAAAAJUAAA=</HashCode>
+      <FileName>FibonacciHeap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dijkstra.Form1">
+    <Position X="2" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ZVgZgKEwgCgyyPSSQiC4QjASC8C9BBAAUHyOCYpEAEA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Dijkstra.Etiqueta" Collapsed="true">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAAIhgAACAACREAAACAQAADAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Etiqueta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dijkstra.EditNode" Collapsed="true">
+    <Position X="6.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAACAgEDAQAACAAAACACg4AAAAEHAAAAAAAAA=</HashCode>
+      <FileName>EditNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dijkstra.DeleteNode" Collapsed="true">
+    <Position X="7.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAACAAECAAAACAAAACAAgYAAAAAGAAAAAAAAI=</HashCode>
+      <FileName>DeleteNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dijkstra.AddNode" Collapsed="true">
+    <Position X="6.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIDAAAAACAAEDAAAACAAAACACgYAAAAEGAAAAAAAAA=</HashCode>
+      <FileName>AddNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dijkstra.BinaryHeap&lt;T&gt;">
+    <Position X="8.5" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ASIAAAAgBAAEAJAQAAAARgQCAgAABQAAAACAAABQIAA=</HashCode>
+      <FileName>BinaryHeap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.213" />
+  </Class>
+  <Enum Name="Dijkstra.GraphType">
+    <Position X="4" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Graph.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
