@@ -18,6 +18,8 @@ namespace WindowsFormsApplication1
         SqlConnection cn;
         SqlCommand cmd;
         SqlDataReader dr;
+        DataTable dt;
+        SqlDataAdapter da;
 
 
 
@@ -41,7 +43,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                cmd = new SqlCommand("insert into NotificacionRuta values ('rut4','1-jun-2020')",cn);
+                cmd = new SqlCommand(consulta,cn);
                 cmd.ExecuteNonQuery();
             }
             catch(Exception ex)
@@ -49,29 +51,33 @@ namespace WindowsFormsApplication1
                 MessageBox.Show("no se conecto no hice la consulta");
             }
         }
-        /*public void abrir()
+        public void CargarDatos(String conulsta, DataGridView tabla)
         {
             try
             {
-                conectarbd.Open();
-                Console.WriteLine("conexion abierta");
+                da = new SqlDataAdapter(conulsta, cn);//se llena el sql adapter con la consulta
+
+                da.Fill(dt);
+                tabla.DataSource = dt;
             }catch(Exception ex)
             {
-                Console.WriteLine("error al abrir la BD+");
+                MessageBox.Show("no se pudo llenar la tabla");
             }
-        }
-        public void cerrar()
-        {
-            conectarbd.Close();
 
 
         }
-        public void query(String query)
+        //me retorna una tabla con los valores de solicitados en la consulta
+
+        public  DataTable Buscar(string idsolicitante, string consulta)
         {
-            cmd = new SqlCommand(query);
-            cmd.ExecuteNonQuery();
-
-
-        }*/
+            DataTable dt2 = new DataTable();
+            
+            cn = new SqlConnection(stringConexion);
+            cmd = new SqlCommand(consulta,cn);
+            da = new SqlDataAdapter(cmd);
+            da.Fill(dt2);
+            return dt2;
+        }
+       
     }
 }

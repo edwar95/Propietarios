@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ModuloFormularios
+namespace WindowsFormsApplication1.ModuloNotificaciones.SimuladorLogin
 {
-    public partial class FrmCalificacionServicio : Form
+    public partial class ListaNotificaciones : Form
     {
-        public FrmCalificacionServicio()
+        public ListaNotificaciones()
         {
             InitializeComponent();
         }
 
-        private void buttonGuardar_Click(object sender, EventArgs e)
+        private void ListaNotificaciones_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
