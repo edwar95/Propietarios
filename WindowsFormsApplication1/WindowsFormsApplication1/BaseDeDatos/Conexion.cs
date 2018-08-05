@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1
             {
                 cn = new SqlConnection(stringConexion);
                 cn.Open();
-                MessageBox.Show("CONECTADO");
+                //MessageBox.Show("CONECTADO");
             }catch(Exception ex){
                 MessageBox.Show("no se conecto a la base");
 

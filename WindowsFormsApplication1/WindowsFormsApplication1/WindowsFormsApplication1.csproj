@@ -84,6 +84,18 @@
     <Compile Include="ModuloNotificaciones\SimuladorLogin\ListaNotificaciones.Designer.cs">
       <DependentUpon>ListaNotificaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModuloNotificaciones\Vista\OpcionesAutoridad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloNotificaciones\Vista\OpcionesAutoridad.Designer.cs">
+      <DependentUpon>OpcionesAutoridad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloNotificaciones\Vista\solicitudesPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloNotificaciones\Vista\solicitudesPendientes.Designer.cs">
+      <DependentUpon>solicitudesPendientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuloReserva\Calendario.cs" />
     <Compile Include="ModuloReserva\Chofer.cs" />
     <Compile Include="ModuloReserva\Fecha.cs" />
@@ -132,6 +144,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloNotificaciones\SimuladorLogin\simuladorLogin.resx">
       <DependentUpon>simuladorLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloNotificaciones\Vista\OpcionesAutoridad.resx">
+      <DependentUpon>OpcionesAutoridad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloNotificaciones\Vista\solicitudesPendientes.resx">
+      <DependentUpon>solicitudesPendientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

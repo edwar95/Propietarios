@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ModuloFormularios;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -22,13 +23,26 @@ namespace WindowsFormsApplication1
             string id = textBox1.Text;
             Conexion cn = new Conexion();
 
-            DataTable dtaux = cn.Buscar(id, "select  idsolicitante, facultad from solicitante where idsolicitante= '" + id + "'");
+            DataTable dtaux = cn.Buscar(id, "select  idsolicitante, facultad, tipo from solicitante where idsolicitante= '" + id + "'");
             if (dtaux.Rows.Count > 0)
             {
-                MessageBox.Show("SOLICITANTE REGISTRADO EN BD");
+                //MessageBox.Show("SOLICITANTE REGISTRADO EN BD");
                 DataRow row = dtaux.Rows[0];
+                string tipo = Convert.ToString(row["tipo"]);
                 string id2 = Convert.ToString(row["facultad"]);
-                MessageBox.Show(id2);
+          
+                if (tipo == "Autoridad")
+                {
+                    OpcionesAutoridad sol = new OpcionesAutoridad();
+                    sol.ShowDialog();
+                }
+                else if(tipo=="No_Autoridad")
+                {
+                    FrmSolicitudDeViaje solviaje = new FrmSolicitudDeViaje();
+                    solviaje.ShowDialog();
+
+                }
+               // MessageBox.Show(id2);
 
 
 
