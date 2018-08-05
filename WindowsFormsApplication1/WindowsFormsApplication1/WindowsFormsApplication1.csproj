@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDeDatos\Conexion.cs" />
+    <Compile Include="ModuloFormularios\CSCalificacionDeServicio.cs" />
+    <Compile Include="ModuloFormularios\CSListaCalificacionServicio.cs" />
+    <Compile Include="ModuloFormularios\CSListaReporteConductor.cs" />
+    <Compile Include="ModuloFormularios\CSListaSolicitudDeViaje.cs" />
+    <Compile Include="ModuloFormularios\CSReporteConductor.cs" />
+    <Compile Include="ModuloFormularios\CSSolicitudDeViaje.cs" />
     <Compile Include="ModuloFormularios\Notificacion.cs" />
     <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionMantenimiento.cs" />
     <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionRuta.cs" />
