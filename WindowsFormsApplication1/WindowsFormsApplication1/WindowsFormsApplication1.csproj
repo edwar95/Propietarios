@@ -144,6 +144,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ModuloNotificaciones\NewFolder1\" />
     <Folder Include="ModuloReportesEstadisticos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
