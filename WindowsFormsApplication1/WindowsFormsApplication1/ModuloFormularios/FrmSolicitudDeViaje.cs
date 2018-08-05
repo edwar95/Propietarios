@@ -77,5 +77,10 @@ namespace ModuloFormularios
                 Console.WriteLine(er.ToString());
             }
         }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using ModuloFormularios;
+using ModuloNotificaciones;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +24,11 @@ namespace WindowsFormsApplication1
             Conexion conect = new Conexion();
             // conect.query("insert into NotificacionRuta values ('rut2','2-jun-2019');");
             //conect.abrir();
-            conect.query("");
+            conect.query("insert into NotificacionRuta values ('rut5','3-jun-2019')");
+            simuladorLogin log = new simuladorLogin();
+            log.ShowDialog();
+            
+                                                 
         }
     }
 }

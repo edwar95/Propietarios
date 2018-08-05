@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
         {
             //Console.Write("ESTADO PENDIENT"+ solicitud);
             c.enviarCorreoNotificacion(correoDestinatario, asunto, "Estado PENDIENTE:  " + solicitud);
+           
         }
     }
 }
