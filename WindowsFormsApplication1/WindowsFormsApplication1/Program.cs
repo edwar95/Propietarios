@@ -19,12 +19,12 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Console.WriteLine("yaaaaaaa");
+            //Console.WriteLine("yaaaaaaa");
            // Application.Run(new FrmSolicitudDeViaje());
             Conexion conect = new Conexion();
             // conect.query("insert into NotificacionRuta values ('rut2','2-jun-2019');");
             //conect.abrir();
-            conect.query("insert into NotificacionRuta values ('rut5','3-jun-2019')");
+           // conect.query("insert into NotificacionRuta values ('rut5','3-jun-2019')");
             simuladorLogin log = new simuladorLogin();
             log.ShowDialog();
             
