@@ -21,7 +21,11 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String x=dataGridView1.SelectedRows.ToString();
+            String x = dataGridView1.CurrentCell.Value.ToString();
+            MessageBox.Show(x);
+            Conexion cn = new Conexion();
+            cn.query("update solicitudreserva set estadosolicitud='aprobada1' where idsolicitudreserva='" + x + "'");
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

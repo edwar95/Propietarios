@@ -50,6 +50,10 @@ namespace WindowsFormsApplication1
                 Console.ReadKey();
             }
         }
-           
+
+        internal void enviarCorreoNotificacion()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
