@@ -2,8 +2,17 @@
   "ExpandedNodes": [
     "",
     "\\WindowsFormsApplication1",
-    "\\WindowsFormsApplication1\\WindowsFormsApplication1"
+    "\\WindowsFormsApplication1\\WindowsFormsApplication1",
+    "\\WindowsFormsApplication1\\WindowsFormsApplication1\\ModuloFormularios",
+    "\\WindowsFormsApplication1\\WindowsFormsApplication1\\ModuloNotificaciones",
+    "\\WindowsFormsApplication1\\WindowsFormsApplication1\\ModuloNotificaciones\\CarpetaNotificaciones",
+    "\\WindowsFormsApplication1\\WindowsFormsApplication1\\ModuloNotificaciones\\CarpetaSolicitud",
+    "\\WindowsFormsApplication1\\WindowsFormsApplication1\\ModuloNotificaciones\\EnviarCorreo",
+    "\\WindowsFormsApplication1\\WindowsFormsApplication1\\ModuloNotificaciones\\Patrón",
+    "\\WindowsFormsApplication1\\WindowsFormsApplication1\\ModuloNotificaciones\\SimuladorLogin",
+    "\\WindowsFormsApplication1\\WindowsFormsApplication1\\ModuloNotificaciones\\Vista",
+    "\\WindowsFormsApplication1\\WindowsFormsApplication1\\ModuloReportesEstadísticos"
   ],
-  "SelectedNode": "\\WindowsFormsApplication1\\WindowsFormsApplication1.sln",
+  "SelectedNode": "\\WindowsFormsApplication1\\WindowsFormsApplication1\\ModuloNotificaciones\\Vista\\Formulario.Designer.cs",
   "PreviewInSolutionExplorer": false
 }
