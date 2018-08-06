@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
         {
             MessageBox.Show(idautoridad);
             Conexion cn = new Conexion();
-            cn.CargarDatos(dataGridView1);
+            cn.CargarDatos("select * from solicitudReserva",dataGridView1);
         }
     }
 }
