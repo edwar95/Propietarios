@@ -1,28 +1,8 @@
-C:\Users\david\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
-C:\Users\david\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\david\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\david\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\Users\david\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\david\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.cache
-C:\Users\david\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\david\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\david\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
-C:\Users\USRLAM\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
-C:\Users\USRLAM\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\USRLAM\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\USRLAM\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
-C:\Users\USRLAM\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\Users\USRLAM\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\USRLAM\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.cache
-C:\Users\USRLAM\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CoreCompileInputs.cache
-C:\Users\USRLAM\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\USRLAM\Documents\GitHub\gestionVehiculosEPN\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
-C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+<<<<<<< HEAD
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
 C:\Users\Isaac\Source\Repos\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojAssemblyReference.cache
@@ -97,6 +77,8 @@ D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplicati
 D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojAssemblyReference.cache
+=======
+>>>>>>> master
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ModuloFormularios.FrmCalificacionServicio.resources
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ModuloFormularios.Form2.resources
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ModuloFormularios.FrmSolicitudDeViaje.resources
@@ -104,5 +86,12 @@ C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFor
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.simuladorLogin.resources
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.OpcionesAutoridad.resources
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.solicitudesPendientes.resources
+C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Formulario.resources
+<<<<<<< HEAD
+=======
+C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.cache
+>>>>>>> master
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CoreCompileInputs.cache
+C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
