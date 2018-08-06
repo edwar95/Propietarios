@@ -47,6 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDeDatos\Conexion.cs" />
+    <Compile Include="ModuloFormularios\CSCalificacionDeServicio.cs" />
+    <Compile Include="ModuloFormularios\CSListaCalificacionServicio.cs" />
+    <Compile Include="ModuloFormularios\CSListaReporteConductor.cs" />
+    <Compile Include="ModuloFormularios\CSListaSolicitudDeViaje.cs" />
+    <Compile Include="ModuloFormularios\CSReporteConductor.cs" />
+    <Compile Include="ModuloFormularios\CSSolicitudDeViaje.cs" />
+    <Compile Include="ModuloFormularios\FrmSolicitudDeViaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmSolicitudDeViaje.designer.cs">
+      <DependentUpon>FrmSolicitudDeViaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuloFormularios\Notificacion.cs" />
     <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionMantenimiento.cs" />
     <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionRuta.cs" />
@@ -65,12 +77,6 @@
     </Compile>
     <Compile Include="ModuloFormularios\FrmReporteConductor.Designer.cs">
       <DependentUpon>FrmReporteConductor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModuloFormularios\FrmSolicitudDeViaje.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModuloFormularios\FrmSolicitudDeViaje.Designer.cs">
-      <DependentUpon>FrmSolicitudDeViaje.cs</DependentUpon>
     </Compile>
     <Compile Include="ModuloNotificaciones\SimuladorLogin\simuladorLogin.cs">
       <SubType>Form</SubType>
