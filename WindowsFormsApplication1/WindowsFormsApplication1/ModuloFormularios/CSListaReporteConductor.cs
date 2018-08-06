@@ -8,5 +8,10 @@ namespace WindowsFormsApplication1.ModuloFormularios
 {
     class CSListaReporteConductor
     {
+       
+
+
+
+
     }
 }
