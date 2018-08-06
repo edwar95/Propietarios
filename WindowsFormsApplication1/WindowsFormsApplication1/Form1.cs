@@ -96,16 +96,36 @@ namespace WindowsFormsApplication1
                 SqlCommand cmd = new SqlCommand("UPDATE SolicitudReserva SET estadoSolicitud= '"+reserva.Estado+"' WHERE idSolicitudReserva=" + reserva.IdReserva, coneccion.getConnection());
                 cmd.ExecuteNonQuery();
                 coneccion.Desconectar();
+
+                String email;
+                ConexionSQL conectAux = new ConexionSQL();
+                conectAux.Conectar();
+                SqlCommand cmdAux = new SqlCommand("select email from Solicitante WHERE idSolicitante=" + reserva.IdCategoriaUsuario , coneccion.getConnection());
+                SqlDataReader readerAux = cmd.ExecuteReader();
+
+                email = readerAux.GetString(0);
+                conectAux.Desconectar();
+
+                NotificacionUsuario notificacion = new NotificacionUsuario();
+                notificacion.NotificacionSolicitudAprobada(email,"Aprovación de reserva",""+reserva.Estado);
             }
             else
             {
                 SqlCommand cmd = new SqlCommand("UPDATE SolicitudReserva SET estadoSolicitud= 'rechazado' WHERE idSolicitudReserva=" + reserva.IdReserva, coneccion.getConnection());
                 cmd.ExecuteNonQuery();
                 coneccion.Desconectar();
-                
-                Notificacion notificacion = new Notificacion();
-                notificacion.NotificacionReserva = "reserva realizada";
-                MessageBox.Show("Reserva rechazada", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                String email;
+                ConexionSQL conectAux = new ConexionSQL();
+                conectAux.Conectar();
+                SqlCommand cmdAux = new SqlCommand("select email from Solicitante WHERE idSolicitante=" + reserva.IdCategoriaUsuario, coneccion.getConnection());
+                SqlDataReader readerAux = cmd.ExecuteReader();
+
+                email = readerAux.GetString(0);
+                conectAux.Desconectar();
+
+                NotificacionUsuario notificacion = new NotificacionUsuario();
+                notificacion.NotificacionSolicitudAprobada(email, "Rechazo de reserva", "" + reserva.Estado);
             }
             
             numReservaTxt.Clear();
