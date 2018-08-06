@@ -39,6 +39,7 @@ namespace WindowsFormsApplication1
                 else if(tipo=="No_Autoridad")
                 {
                     FrmSolicitudDeViaje solviaje = new FrmSolicitudDeViaje();
+                    //solviaje.set
                     solviaje.ShowDialog();
 
                 }
