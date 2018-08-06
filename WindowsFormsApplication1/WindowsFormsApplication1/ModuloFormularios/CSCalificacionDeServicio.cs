@@ -8,6 +8,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
 {
     class CSCalificacionDeServicio
     {
+        //Holiii cariito :),  espero que funcione 
         private string puntualSalida;
         private string limpiezaVehiculo;
         private string puntualAlDestino;

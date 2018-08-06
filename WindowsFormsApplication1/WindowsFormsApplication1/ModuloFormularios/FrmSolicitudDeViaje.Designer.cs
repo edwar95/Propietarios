@@ -52,15 +52,15 @@
             this.dtf_salida = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonCancelar = new System.Windows.Forms.Button();
-            this.buttonGuardar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxMotivos = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.buttonGuardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -358,33 +358,22 @@
             this.tableLayoutPanel8.Size = new System.Drawing.Size(570, 47);
             this.tableLayoutPanel8.TabIndex = 7;
             // 
-            // buttonCancelar
+            // textBox1
             // 
-            this.buttonCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonCancelar.AutoSize = true;
-            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
-            this.buttonCancelar.Location = new System.Drawing.Point(368, 6);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(119, 33);
-            this.buttonCancelar.TabIndex = 2;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(288, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(279, 24);
+            this.textBox1.TabIndex = 2;
             // 
-            // buttonGuardar
+            // label6
             // 
-            this.buttonGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonGuardar.AutoSize = true;
-            this.buttonGuardar.Image = ((System.Drawing.Image)(resources.GetObject("buttonGuardar.Image")));
-            this.buttonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGuardar.Location = new System.Drawing.Point(86, 6);
-            this.buttonGuardar.Name = "buttonGuardar";
-            this.buttonGuardar.Size = new System.Drawing.Size(112, 33);
-            this.buttonGuardar.TabIndex = 0;
-            this.buttonGuardar.Text = "Guardar";
-            this.buttonGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonGuardar.UseVisualStyleBackColor = true;
-            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(157, 18);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Número De Personas:";
             // 
             // panel1
             // 
@@ -442,22 +431,33 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(570, 45);
             this.tableLayoutPanel7.TabIndex = 9;
             // 
-            // label6
+            // buttonCancelar
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(157, 18);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Número De Personas:";
+            this.buttonCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCancelar.AutoSize = true;
+            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
+            this.buttonCancelar.Location = new System.Drawing.Point(368, 6);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(119, 33);
+            this.buttonCancelar.TabIndex = 2;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // buttonGuardar
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(288, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 24);
-            this.textBox1.TabIndex = 2;
+            this.buttonGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonGuardar.AutoSize = true;
+            this.buttonGuardar.Image = ((System.Drawing.Image)(resources.GetObject("buttonGuardar.Image")));
+            this.buttonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGuardar.Location = new System.Drawing.Point(86, 6);
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.Size = new System.Drawing.Size(112, 33);
+            this.buttonGuardar.TabIndex = 0;
+            this.buttonGuardar.Text = "Guardar";
+            this.buttonGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
             // FrmSolicitudDeViaje
             // 
