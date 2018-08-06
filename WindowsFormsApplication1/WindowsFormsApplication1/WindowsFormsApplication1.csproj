@@ -47,12 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDeDatos\Conexion.cs" />
-    <Compile Include="ModuloFormularios\CSCalificacionDeServicio.cs" />
-    <Compile Include="ModuloFormularios\CSListaCalificacionServicio.cs" />
-    <Compile Include="ModuloFormularios\CSListaReporteConductor.cs" />
-    <Compile Include="ModuloFormularios\CSListaSolicitudDeViaje.cs" />
-    <Compile Include="ModuloFormularios\CSReporteConductor.cs" />
-    <Compile Include="ModuloFormularios\CSSolicitudDeViaje.cs" />
+    <Compile Include="ModuloFormularios\CalificacionDeServicio.cs" />
+    <Compile Include="ModuloFormularios\ListaCalificacionServicio.cs" />
+    <Compile Include="ModuloFormularios\ListaReporteConductor.cs" />
+    <Compile Include="ModuloFormularios\ListaSolicitudDeViaje.cs" />
+    <Compile Include="ModuloFormularios\ReporteConductor.cs" />
+    <Compile Include="ModuloFormularios\SolicitudDeViaje.cs" />
     <Compile Include="ModuloFormularios\FrmSolicitudDeViaje.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.ModuloFormularios
 {
-    class CSSolicitudDeViaje
+    class SolicitudDeViaje
     {
         private string correoInstitucional;
         private string nombreCompletoSolicitante;
@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
         private SqlConnection conn;
 
 
-        public CSSolicitudDeViaje(string correoInstitucional, string nombreCompletoSolicitante, string destino, string fechaSalida, string horaSalida, string fechaRetorno, string horaRetorno, string motivo, int numeroPersonas, int idmotivo)
+        public SolicitudDeViaje(string correoInstitucional, string nombreCompletoSolicitante, string destino, string fechaSalida, string horaSalida, string fechaRetorno, string horaRetorno, string motivo, int numeroPersonas)
         {
             this.correoInstitucional = correoInstitucional;
             this.nombreCompletoSolicitante = nombreCompletoSolicitante;
@@ -138,15 +138,14 @@ namespace WindowsFormsApplication1.ModuloFormularios
 
         }
 
-        public void setIDs(int idmotivo,int idUsuario, int idLugar) {
+        public void setIDs(int idmotivo, int idLugar) {
             this.idmotivo = idmotivo;
-            this.idUsuario = idUsuario;
             this.idLugar = idLugar;
         }
 
         public void guardarEnBase() {
 
-            String idSolicitante;
+            String idSolicitante="";
             try
             {
                 cnx = new Conexion();
@@ -175,7 +174,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
                 conn = new SqlConnection(cnx.stringConexion);
                 conn.Open();
                 String sql = "insert into SolicitudReserva(idMotivoViaje,idSolicitante,idLugar,numeroPersonas,fechaSalida,fechaRetorno,estadoSolicitud,fechaReserva) " +
-                    "values(" + idmotivo + "," + idUsuario + "," + idLugar + ",'" +  numeroPersonas + "," + fechaSalida +" "+horaSalida+"','" + fechaRetorno + " " + horaRetorno + "','en espera','" +thisDay.ToString() + "')";
+                    "values(" + idmotivo + "," + idSolicitante + "," + idLugar + ",'" +  numeroPersonas + "," + fechaSalida +" "+horaSalida+"','" + fechaRetorno + " " + horaRetorno + "','en espera','" +thisDay.ToString() + "')";
                 SqlCommand comando = new SqlCommand(sql, conn);
                 int resultado = comando.ExecuteNonQuery();
                 MessageBox.Show("" + sql);

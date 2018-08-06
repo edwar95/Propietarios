@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.ModuloFormularios
 {
-    class CSListaCalificacionServicio
+    class ListaReporteConductor
     {
+       
+
+
+
+
     }
 }

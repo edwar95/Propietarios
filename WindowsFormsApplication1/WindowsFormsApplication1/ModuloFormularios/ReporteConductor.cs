@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.ModuloFormularios
 {
-    class CSReporteConductor
+    class ReporteConductor
     {
         private string cedulaConductor;
         private string nombreCompletoConductor;
@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
         private float dineroGastadoEnGasolina;
         private string comportameientoPasajeros;
 
-        public CSReporteConductor(string cedulaConductor, string nombreCompletoConductor, string inconvenientesViaje, string descripcionInconveniente, float dineroGastadoEnGasolina, string comportameientoPasajeros)
+        public ReporteConductor(string cedulaConductor, string nombreCompletoConductor, string inconvenientesViaje, string descripcionInconveniente, float dineroGastadoEnGasolina, string comportameientoPasajeros)
         {
             this.cedulaConductor = cedulaConductor;
             this.nombreCompletoConductor = nombreCompletoConductor;

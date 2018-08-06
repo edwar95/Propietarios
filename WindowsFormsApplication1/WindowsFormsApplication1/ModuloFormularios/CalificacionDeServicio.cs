@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.ModuloFormularios
 {
-    class CSCalificacionDeServicio
+    class CalificacionDeServicio
     {
         //Holiii cariito :),  espero que funcione 
 
@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
         private string comentariosAdicionales;
         private Conexion cnx = new Conexion();
 
-        public CSCalificacionDeServicio(string puntualSalida, string limpiezaVehiculo, string puntualAlDestino, string puntualAlRetorno, string comentariosAdicionales)
+        public CalificacionDeServicio(string puntualSalida, string limpiezaVehiculo, string puntualAlDestino, string puntualAlRetorno, string comentariosAdicionales)
         {
             this.puntualSalida = puntualSalida;
             this.limpiezaVehiculo = limpiezaVehiculo;
