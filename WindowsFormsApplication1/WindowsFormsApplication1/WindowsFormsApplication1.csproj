@@ -104,7 +104,6 @@
     </Compile>
     <Compile Include="ModuloReserva\Calendario.cs" />
     <Compile Include="ModuloReserva\Chofer.cs" />
-    <Compile Include="ModuloReserva\ConexionSQL.cs" />
     <Compile Include="ModuloReserva\Fecha.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
