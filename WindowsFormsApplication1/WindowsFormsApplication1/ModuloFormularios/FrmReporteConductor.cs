@@ -19,6 +19,8 @@ namespace ModuloFormularios
             InitializeComponent();
             reporteConductor = new ReporteConductor();
             reporteConductor.setIdConductor(idConductor);
+            textBox1.Text = idConductor;
+            textBox2.Text = reporteConductor.getNombreCompletoConductor();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -78,7 +80,6 @@ namespace ModuloFormularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-            reporteConductor = new ReporteConductor();
             try
             {
                 reporteConductor.setDineroGastadoEnGasolina(textBox4.Text);
@@ -114,7 +115,7 @@ namespace ModuloFormularios
                 {
                     reporteConductor.setComportameientoPasajeros("100");
                 }
-                reporteConductor.setCedulaConductor(textBox1.Text);
+                reporteConductor.setIdConductor(textBox1.Text);
                 reporteConductor.guardarEnBase();
             }
             catch (Exception er)

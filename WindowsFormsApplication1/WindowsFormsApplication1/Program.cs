@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
             // conect.query("insert into NotificacionRuta values ('rut5','3-jun-2019')");
             //simuladorLogin log = new simuladorLogin();
             //log.ShowDialog();
-            Application.Run(new Form2());
+            Application.Run(new Form2(1+""));
 
         }
     }
