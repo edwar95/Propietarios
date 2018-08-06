@@ -127,12 +127,6 @@
     <Compile Include="ModuloNotificaciones\Vista\Formulario.Designer.cs">
       <DependentUpon>Formulario.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuloNotificaciones\Vista\VistaPrueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModuloNotificaciones\Vista\VistaPrueba.Designer.cs">
-      <DependentUpon>VistaPrueba.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,12 +159,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ModuloNotificaciones\Vista\Formulario.resx">
       <DependentUpon>Formulario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModuloNotificaciones\Vista\VistaPrueba.resx">
-      <DependentUpon>VistaPrueba.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -187,6 +179,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ModuloReportesEstadisticos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9085d70f74eff5766f1529bcdc28b806.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\epn.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
