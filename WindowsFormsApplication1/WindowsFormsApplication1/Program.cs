@@ -18,19 +18,19 @@ namespace WindowsFormsApplication1
         static void Main()
         {
             Correo cor = new Correo();
-            
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
             //Console.WriteLine("yaaaaaaa");
-           // Application.Run(new FrmSolicitudDeViaje());
-            Conexion conect = new Conexion();
+            // Application.Run(new FrmSolicitudDeViaje());
+            //Conexion conect = new Conexion();
             // conect.query("insert into NotificacionRuta values ('rut2','2-jun-2019');");
             //conect.abrir();
             // conect.query("insert into NotificacionRuta values ('rut5','3-jun-2019')");
-            simuladorLogin log = new simuladorLogin();
-            log.ShowDialog();
-            
-                                                 
+            //simuladorLogin log = new simuladorLogin();
+            //log.ShowDialog();
+            Application.Run(new Form2());
+
         }
     }
 }

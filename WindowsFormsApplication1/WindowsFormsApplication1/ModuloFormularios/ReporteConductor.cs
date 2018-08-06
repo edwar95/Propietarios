@@ -1,44 +1,82 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.ModuloFormularios
 {
     class ReporteConductor
     {
-        private string cedulaConductor;
+        private string idConductor;
         private string nombreCompletoConductor;
-        private string inconvenientesViaje;
+        private bool inconvenientesViaje;
         private string descripcionInconveniente;
-        private float dineroGastadoEnGasolina;
-        private string comportameientoPasajeros;
+        private string dineroGastadoEnGasolina;
+        private string comportamientoPasajeros;
+        private Conexion cnx = new Conexion();
+        private SqlConnection conn;
 
-        public ReporteConductor(string cedulaConductor, string nombreCompletoConductor, string inconvenientesViaje, string descripcionInconveniente, float dineroGastadoEnGasolina, string comportameientoPasajeros)
+        public ReporteConductor(string idConductor, string nombreCompletoConductor, bool inconvenientesViaje, string descripcionInconveniente, string dineroGastadoEnGasolina, string comportamientoPasajeros)
         {
-            this.cedulaConductor = cedulaConductor;
+            this.idConductor = idConductor;
             this.nombreCompletoConductor = nombreCompletoConductor;
             this.inconvenientesViaje = inconvenientesViaje;
             this.descripcionInconveniente = descripcionInconveniente;
             this.dineroGastadoEnGasolina = dineroGastadoEnGasolina;
-            this.comportameientoPasajeros = comportameientoPasajeros;
+            this.comportamientoPasajeros = comportamientoPasajeros;
         }
+        public ReporteConductor()
+        {
 
+        }
         public string getCedulaConductor()
         {
-            return this.cedulaConductor;
+            return this.idConductor;
         }
 
-        public void setCedulaConductor(string cedulaConductor)
+        public void setIdConductor(string idConductor)
         {
-            this.cedulaConductor = cedulaConductor;
+        this.idConductor = idConductor;
 
         }
 
         public string getNombreCompletoConductor()
         {
-            return this.nombreCompletoConductor;
+            try
+            {
+                cnx = new Conexion();
+                conn = new SqlConnection(cnx.stringConexion);
+                SqlDataReader reader = null;
+                String sql = "select NOMBRECHOFER, APELLIDOCHOFER from chofer where cedulachofer like'" +idConductor + "'";
+                conn.Open();
+                SqlCommand comando = new SqlCommand(sql, conn);
+                reader = comando.ExecuteReader();
+                int i = 0;
+                nombreCompletoConductor = "";
+                while (reader.Read())
+                {
+
+                    if (i == 0)
+                    {
+                        nombreCompletoConductor = "" + reader[i];
+                    }
+                    else
+                    {
+                        nombreCompletoConductor = nombreCompletoConductor + " " + reader[i];
+                    }
+                    i++;
+                }
+                conn.Close();
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error");
+                Console.WriteLine(er.ToString());
+            }
+            return nombreCompletoConductor;
         }
 
         public void setNombreCompletoConducto(string nombreCompletoConductor)
@@ -47,13 +85,13 @@ namespace WindowsFormsApplication1.ModuloFormularios
 
         }
 
-        public string getInconvenientesViaje()
+        public bool getInconvenientesViaje()
         {
             return this.inconvenientesViaje;
         }
 
 
-        public void setInconvenientesViaje(string inconvenientesViaje)
+        public void setInconvenientesViaje(bool inconvenientesViaje)
         {
             this.inconvenientesViaje = inconvenientesViaje;
 
@@ -73,25 +111,66 @@ namespace WindowsFormsApplication1.ModuloFormularios
 
         public string getComportameientoPasajeros()
         {
-            return this.comportameientoPasajeros;
+            return this.comportamientoPasajeros;
         }
 
         public void setComportameientoPasajeros(string comportameientoPasajeros)
         {
-            this.comportameientoPasajeros = comportameientoPasajeros;
+            this.comportamientoPasajeros = comportameientoPasajeros;
 
         }
 
-        public float getDineroGastadoEnGasolina()
+        public string getDineroGastadoEnGasolina()
         {
             return this.dineroGastadoEnGasolina;
         }
 
-        public void setDineroGastadoEnGasolina(float dineroGastadoEnGasolina)
+        public void setDineroGastadoEnGasolina(string dineroGastadoEnGasolina)
         {
             this.dineroGastadoEnGasolina = dineroGastadoEnGasolina;
 
         }
+        public void guardarEnBase()
+        {
+            if (!idConductor.Equals(null))
+            {
+                try
+                {
+                    cnx = new Conexion();
+                    conn = new SqlConnection(cnx.stringConexion);
+                    conn.Open();
+                    String sql = "";
 
+                    if (inconvenientesViaje.Equals("null"))
+                    {
+
+                        sql = "insert into ReporteConductor (idchofer, incoveniente,gasto_combustible,comportamiento_pasajeros) values(" + idConductor + ",null," + dineroGastadoEnGasolina + "," + comportamientoPasajeros + ")";
+                    }
+                    else
+                    {
+                        sql = "insert into ReporteConductor (idchofer, incoveniente,gasto_combustible,comportamiento_pasajeros) values(" + idConductor + "," + descripcionInconveniente + "," + dineroGastadoEnGasolina + "," + comportamientoPasajeros + ")";
+                    }
+
+                    SqlCommand comando = new SqlCommand(sql, conn);
+                    int resultado = comando.ExecuteNonQuery();
+                    // Comprobar resultado y mandar mensaje de confirmacion o de reintento
+                    MessageBox.Show(resultado + "");
+                    MessageBox.Show("" + sql);
+                }
+                catch (Exception er)
+                {
+                    MessageBox.Show("Error");
+                    Console.WriteLine(er.ToString());
+                }
+            }
+            else
+            {
+
+                MessageBox.Show("ID DEL CONDUCTOR NO EXISTENTE");
+            }
+        }
     }
 }
+
+    
+
