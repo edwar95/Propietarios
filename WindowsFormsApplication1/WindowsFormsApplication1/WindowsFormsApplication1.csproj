@@ -48,12 +48,12 @@
   <ItemGroup>
     <Compile Include="BaseDeDatos\Conexion.cs" />
     <Compile Include="ModuloFormularios\Notificacion.cs" />
-    <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionMantenimiento.cs" />
-    <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionRuta.cs" />
-    <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionUsuario.cs" />
-    <Compile Include="ModuloNotificaciones\CarpetaSolicitud\Autorizacion.cs" />
-    <Compile Include="ModuloNotificaciones\CarpetaSolicitud\Solicitud.cs" />
-    <Compile Include="ModuloNotificaciones\EnviarCorreo\Correo.cs" />
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\CarpetaNotificaciones\NotificacionMantenimiento.cs" />
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\CarpetaNotificaciones\NotificacionRuta.cs" />
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\CarpetaNotificaciones\NotificacionUsuario.cs" />
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\CarpetaSolicitud\Autorizacion.cs" />
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\CarpetaSolicitud\Solicitud.cs" />
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\EnviarCorreo\Correo.cs" />
     <Compile Include="ModuloFormularios\FrmCalificacionServicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,28 +72,28 @@
     <Compile Include="ModuloFormularios\FrmSolicitudDeViaje.Designer.cs">
       <DependentUpon>FrmSolicitudDeViaje.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuloNotificaciones\SimuladorLogin\simuladorLogin.cs">
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\SimuladorLogin\simuladorLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuloNotificaciones\SimuladorLogin\simuladorLogin.Designer.cs">
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\SimuladorLogin\simuladorLogin.Designer.cs">
       <DependentUpon>simuladorLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuloNotificaciones\SimuladorLogin\ListaNotificaciones.cs">
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\SimuladorLogin\ListaNotificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuloNotificaciones\SimuladorLogin\ListaNotificaciones.Designer.cs">
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\SimuladorLogin\ListaNotificaciones.Designer.cs">
       <DependentUpon>ListaNotificaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuloNotificaciones\Vista\OpcionesAutoridad.cs">
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\Vista\OpcionesAutoridad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuloNotificaciones\Vista\OpcionesAutoridad.Designer.cs">
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\Vista\OpcionesAutoridad.Designer.cs">
       <DependentUpon>OpcionesAutoridad.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuloNotificaciones\Vista\solicitudesPendientes.cs">
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\Vista\solicitudesPendientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuloNotificaciones\Vista\solicitudesPendientes.Designer.cs">
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\Vista\solicitudesPendientes.Designer.cs">
       <DependentUpon>solicitudesPendientes.cs</DependentUpon>
     </Compile>
     <Compile Include="ModuloReserva\Calendario.cs" />
@@ -106,26 +106,20 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="ModuloReserva\Notificacion.cs" />
-    <Compile Include="ModuloNotificaciones\Patrón\Aprobado.cs" />
-    <Compile Include="ModuloNotificaciones\Patrón\Estado.cs" />
-    <Compile Include="ModuloNotificaciones\Patrón\Pendiente.cs" />
-    <Compile Include="ModuloNotificaciones\Patrón\Rechazado.cs" />
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\Patrón\Aprobado.cs" />
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\Patrón\Estado.cs" />
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\Patrón\Pendiente.cs" />
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\Patrón\Rechazado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ModuloReserva\Reserva.cs" />
     <Compile Include="ModuloReserva\Vehiculo.cs" />
     <Compile Include="ModuloReserva\Viaje.cs" />
-    <Compile Include="ModuloNotificaciones\Vista\Formulario.cs">
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\Vista\Formulario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuloNotificaciones\Vista\Formulario.Designer.cs">
+    <Compile Include="ModuloFormularios\ModuloNotificaciones\Vista\Formulario.Designer.cs">
       <DependentUpon>Formulario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModuloNotificaciones\Vista\VistaPrueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModuloNotificaciones\Vista\VistaPrueba.Designer.cs">
-      <DependentUpon>VistaPrueba.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -139,16 +133,16 @@
     <EmbeddedResource Include="ModuloFormularios\FrmSolicitudDeViaje.resx">
       <DependentUpon>FrmSolicitudDeViaje.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModuloNotificaciones\SimuladorLogin\ListaNotificaciones.resx">
+    <EmbeddedResource Include="ModuloFormularios\ModuloNotificaciones\SimuladorLogin\ListaNotificaciones.resx">
       <DependentUpon>ListaNotificaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModuloNotificaciones\SimuladorLogin\simuladorLogin.resx">
+    <EmbeddedResource Include="ModuloFormularios\ModuloNotificaciones\SimuladorLogin\simuladorLogin.resx">
       <DependentUpon>simuladorLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModuloNotificaciones\Vista\OpcionesAutoridad.resx">
+    <EmbeddedResource Include="ModuloFormularios\ModuloNotificaciones\Vista\OpcionesAutoridad.resx">
       <DependentUpon>OpcionesAutoridad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModuloNotificaciones\Vista\solicitudesPendientes.resx">
+    <EmbeddedResource Include="ModuloFormularios\ModuloNotificaciones\Vista\solicitudesPendientes.resx">
       <DependentUpon>solicitudesPendientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -159,12 +153,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ModuloNotificaciones\Vista\Formulario.resx">
+    <EmbeddedResource Include="ModuloFormularios\ModuloNotificaciones\Vista\Formulario.resx">
       <DependentUpon>Formulario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModuloNotificaciones\Vista\VistaPrueba.resx">
-      <DependentUpon>VistaPrueba.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -181,6 +173,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ModuloReportesEstadisticos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azul.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\epn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\epnlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9085d70f74eff5766f1529bcdc28b806.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -34,7 +34,13 @@ namespace WindowsFormsApplication1
         {
             MessageBox.Show(idautoridad);
             Conexion cn = new Conexion();
-            cn.CargarDatos("select * from solicitudReserva",dataGridView1);
+         
+            DataTable dtaux = cn.Buscar(idautoridad, "select  idsolicitante, facultad, tipo from solicitante where idsolicitante= '" + idautoridad + "'");
+            DataRow row = dtaux.Rows[0];
+            string tipo = Convert.ToString(row["tipo"]);
+            string facultad = Convert.ToString(row["facultad"]);
+            MessageBox.Show("  select *from SolicitudReserva where idSolicitante in (select idSolicitante from Solicitante where facultad ='" + facultad + "'");
+            cn.CargarDatos("  select *from SolicitudReserva where estadosolicitud = 'en espera' AND idSolicitante in (select idSolicitante from Solicitante where facultad ='"+facultad+"') ", dataGridView1);
         }
     }
 }
