@@ -13,14 +13,16 @@ namespace WindowsFormsApplication1
 {
     public partial class OpcionesAutoridad : Form
     {
-        public OpcionesAutoridad()
+        string idau;
+        public OpcionesAutoridad(String id)
         {
             InitializeComponent();
+            idau = id;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            solicitudesPendientes pendientes = new solicitudesPendientes();
+            solicitudesPendientes pendientes = new solicitudesPendientes(idau);
             pendientes.ShowDialog();
         }
 
@@ -28,6 +30,11 @@ namespace WindowsFormsApplication1
         {
             FrmSolicitudDeViaje sol = new FrmSolicitudDeViaje();
             sol.ShowDialog();
+        }
+
+        private void OpcionesAutoridad_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

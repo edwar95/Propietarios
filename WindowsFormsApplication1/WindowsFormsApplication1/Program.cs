@@ -17,6 +17,8 @@ namespace WindowsFormsApplication1
         [STAThread]
         static void Main()
         {
+            Correo cor = new Correo();
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Console.WriteLine("yaaaaaaa");

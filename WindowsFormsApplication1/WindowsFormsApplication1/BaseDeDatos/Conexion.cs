@@ -51,17 +51,21 @@ namespace WindowsFormsApplication1
                 MessageBox.Show("no se conecto no hice la consulta");
             }
         }
-        public void CargarDatos(String conulsta, DataGridView tabla)
+        public void CargarDatos( DataGridView tabla)
         {
             try
             {
-                da = new SqlDataAdapter(conulsta, cn);//se llena el sql adapter con la consulta
-
-                da.Fill(dt);
-                tabla.DataSource = dt;
-            }catch(Exception ex)
+                DataTable dt2 = new DataTable();
+                cn = new SqlConnection(stringConexion);
+                cmd = new SqlCommand("select * from solicitante", cn);
+                da = new SqlDataAdapter(cmd);
+                da.Fill(dt2);
+                tabla.DataSource = dt2;
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show("no se pudo llenar la tabla");
+                MessageBox.Show(Convert.ToString(ex));
             }
 
 
@@ -78,6 +82,7 @@ namespace WindowsFormsApplication1
             da.Fill(dt2);
             return dt2;
         }
+      
        
     }
 }
