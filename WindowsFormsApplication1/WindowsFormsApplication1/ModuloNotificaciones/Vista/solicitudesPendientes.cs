@@ -12,14 +12,29 @@ namespace WindowsFormsApplication1
 {
     public partial class solicitudesPendientes : Form
     {
-        public solicitudesPendientes()
+        string idautoridad;
+        public solicitudesPendientes(string idauto)
         {
+            idautoridad = idauto;
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(idautoridad);
+            Conexion cn = new Conexion();
+            cn.CargarDatos(dataGridView1);
         }
     }
 }

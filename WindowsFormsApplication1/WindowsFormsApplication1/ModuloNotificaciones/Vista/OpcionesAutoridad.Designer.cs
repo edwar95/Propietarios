@@ -61,6 +61,7 @@
             this.Controls.Add(this.button1);
             this.Name = "OpcionesAutoridad";
             this.Text = "OpcionesAutoridad";
+            this.Load += new System.EventHandler(this.OpcionesAutoridad_Load);
             this.ResumeLayout(false);
 
         }

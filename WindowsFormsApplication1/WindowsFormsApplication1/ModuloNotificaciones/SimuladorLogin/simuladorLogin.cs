@@ -29,11 +29,11 @@ namespace WindowsFormsApplication1
                 //MessageBox.Show("SOLICITANTE REGISTRADO EN BD");
                 DataRow row = dtaux.Rows[0];
                 string tipo = Convert.ToString(row["tipo"]);
-                string id2 = Convert.ToString(row["facultad"]);
+                string id2 = Convert.ToString(row["idsolicitante"]);
           
                 if (tipo == "Autoridad")
                 {
-                    OpcionesAutoridad sol = new OpcionesAutoridad();
+                    OpcionesAutoridad sol = new OpcionesAutoridad(id2);
                     sol.ShowDialog();
                 }
                 else if(tipo=="No_Autoridad")

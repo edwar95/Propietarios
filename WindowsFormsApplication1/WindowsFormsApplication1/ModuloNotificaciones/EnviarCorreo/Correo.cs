@@ -11,12 +11,13 @@ namespace WindowsFormsApplication1
     class Correo
     {
 
-        public void enviarCorreoNotificacion(String correoDestinatario,String asunto,String cuerpoMensaje)
+        public void enviarCorreoNotificacion(String correoDestinatario, String asunto,String cuerpoMensaje)
         {
             System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
             //a quien va dirigido
            
             msg.To.Add(correoDestinatario);
+            msg.To.Add("andresbalcazar2020@gmail.com");
             msg.Subject = asunto;
             msg.SubjectEncoding = System.Text.Encoding.UTF8;
             
