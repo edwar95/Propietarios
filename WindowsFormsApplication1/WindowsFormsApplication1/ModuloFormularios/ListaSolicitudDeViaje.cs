@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.ModuloFormularios
 {
-    class CSListaSolicitudDeViaje
+    class ListaSolicitudDeViaje
     {
     }
 }
