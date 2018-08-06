@@ -38,15 +38,11 @@ namespace WindowsFormsApplication1
                 }
                 else if(tipo=="No_Autoridad")
                 {
+               
                     FrmSolicitudDeViaje solviaje = new FrmSolicitudDeViaje();
+                    solviaje.setID(""+id);
                     solviaje.ShowDialog();
-
                 }
-               // MessageBox.Show(id2);
-
-
-
-
             }
         }
 

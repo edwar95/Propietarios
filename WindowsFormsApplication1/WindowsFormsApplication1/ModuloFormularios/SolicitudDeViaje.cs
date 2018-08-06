@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
         private int numeroPersonas;
         private Conexion cnx = new Conexion();
         private SqlConnection conn;
-
+        private int idSolicitante = 0;
 
         public SolicitudDeViaje(string correoInstitucional, string nombreCompletoSolicitante, string destino, string fechaSalida, string horaSalida, string fechaRetorno, string horaRetorno, string motivo, int numeroPersonas)
         {
@@ -135,37 +135,37 @@ namespace WindowsFormsApplication1.ModuloFormularios
         public void setCorreoInstitucional(string correoInstitucional)
         {
             this.correoInstitucional = correoInstitucional;
-
         }
 
-        public void setIDs(int idmotivo, int idLugar) {
+        public void setIDs(int idmotivo, int idLugar,int idSolicitante) {
             this.idmotivo = idmotivo;
             this.idLugar = idLugar;
+            this.idSolicitante = idSolicitante;
         }
 
         public void guardarEnBase() {
 
-            String idSolicitante="";
-            try
-            {
-                cnx = new Conexion();
-                conn = new SqlConnection(cnx.stringConexion);
-                SqlDataReader reader = null;
-                String sql = "select idSolicitante from Solicitante where nombreSolicitante='" + nombreCompletoSolicitante + "'";
-                conn.Open();
-                SqlCommand comando = new SqlCommand(sql, conn);
-                reader = comando.ExecuteReader();
-                while (reader.Read())
-                {
-                    idSolicitante = "" + reader[0];
-                }
-                conn.Close();
-            }
-            catch (Exception er)
-            {
-                MessageBox.Show("Error");
-                Console.WriteLine(er.ToString());
-            }
+            
+            //try
+            //{
+            //    cnx = new Conexion();
+            //    conn = new SqlConnection(cnx.stringConexion);
+            //    SqlDataReader reader = null;
+            //    String sql = "select idSolicitante from Solicitante where nombreSolicitante='" + nombreCompletoSolicitante + "'";
+            //    conn.Open();
+            //    SqlCommand comando = new SqlCommand(sql, conn);
+            //    reader = comando.ExecuteReader();
+            //    while (reader.Read())
+            //    {
+            //        idSolicitante = "" + reader[0];
+            //    }
+            //    conn.Close();
+            //}
+            //catch (Exception er)
+            //{
+            //    MessageBox.Show("Error");
+            //    Console.WriteLine(er.ToString());
+            //}
 
             try
             {

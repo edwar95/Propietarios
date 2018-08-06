@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using WindowsFormsApplication1;
 using WindowsFormsApplication1.ModuloFormularios;
 
+
 namespace ModuloFormularios
 {
     public partial class FrmSolicitudDeViaje : Form
@@ -19,10 +20,12 @@ namespace ModuloFormularios
         private Conexion cnx = new Conexion();
         private SqlConnection conn;
         private ArrayList idDestino = new ArrayList();
+        String id = "";
         public FrmSolicitudDeViaje()
         {
             InitializeComponent();
             SqlDataReader reader = null;
+           
             conn = new SqlConnection(cnx.stringConexion);
             try
             {
@@ -45,6 +48,7 @@ namespace ModuloFormularios
             conn = new SqlConnection(cnx.stringConexion);
             try
             {
+
                 conn.Open();
                 SqlCommand comando = new SqlCommand("SELECT idMotivoViaje, descripcion FROM dbo.MotivoViaje", conn);
                 reader = comando.ExecuteReader();
@@ -56,21 +60,46 @@ namespace ModuloFormularios
 
                 }
                 comboBoxMotivos.SelectedIndex = 0;
-
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
+               
             }
-
         }
-        
-        
+
+        public void setID(string id) {
+            this.id = id;
+            try
+            {//
+                cnx = new Conexion();
+                conn = new SqlConnection(cnx.stringConexion);
+                conn.Open();
+                String sql = "select nombreSolicitante,email from Solicitante where idSolicitante = 1";
+                SqlCommand comando = new SqlCommand(sql, conn);
+                SqlDataReader reader = null;
+                reader = comando.ExecuteReader();
+                String nombre="", email="";
+                while (reader.Read())
+                {
+                    nombre = ""+reader[0];
+                    email = ""+reader[1]; 
+                  
+                }
+                txt_ciSolicitante.Text = email;
+                txt_nombreSolicitante.Text = nombre;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                MessageBox.Show("Murio aqui");
+            }
+        }
         
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
             SolicitudDeViaje cssolicitud = new SolicitudDeViaje(txt_ciSolicitante.Text, txt_nombreSolicitante.Text, comboBoxDestinos.SelectedItem.ToString(), dtf_salida.Text, dth_salida.Text, dtf_llegada.Text, dth_llegada.Text, comboBoxDestinos.SelectedItem.ToString(), Int32.Parse(textBox1.Text));
-            cssolicitud.setIDs((comboBoxMotivos.SelectedIndex + 1), (comboBoxDestinos.SelectedIndex + 1));
+            cssolicitud.setIDs((comboBoxMotivos.SelectedIndex + 1), (comboBoxDestinos.SelectedIndex + 1), Int32.Parse(id));
             cssolicitud.guardarEnBase();
         }
     }
