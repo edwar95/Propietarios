@@ -41,13 +41,15 @@ namespace WindowsFormsApplication1
             
 
             coneccion.Conectar();
-            SqlCommand cmd = new SqlCommand("select * from SolicitudReserva WHERE idSolicitudReserva ="+ numReservaTxt.Text+"and estadoSolicitud = 'en espera'", coneccion.getConnection());
+            SqlCommand cmd = new SqlCommand("select * from SolicitudReserva WHERE idSolicitudReserva ="+ numReservaTxt.Text+"and estadoSolicitud = 'aprobada1", coneccion.getConnection());
             SqlDataReader reader = cmd.ExecuteReader();
 
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
+
+
                     reserva.IdReserva = reader.GetInt32(0);
                     numReservaTxt.Text = reserva.IdReserva.ToString();
 
@@ -67,6 +69,8 @@ namespace WindowsFormsApplication1
                     fechaFinaliza.Value = Convert.ToDateTime(reserva.FechaFin);
 
                     reserva.Estado = reader.GetString(8);
+
+                    
 
                     confirmarBtn.Enabled = true;
                 }
@@ -88,7 +92,7 @@ namespace WindowsFormsApplication1
             coneccion.Conectar();
             if (reserva.confirmarViaje())
             {
-                reserva.Estado = "aprobado";
+                reserva.Estado = "aprobada2";
                 SqlCommand cmd = new SqlCommand("UPDATE SolicitudReserva SET estadoSolicitud= '"+reserva.Estado+"' WHERE idSolicitudReserva=" + reserva.IdReserva, coneccion.getConnection());
                 cmd.ExecuteNonQuery();
                 coneccion.Desconectar();

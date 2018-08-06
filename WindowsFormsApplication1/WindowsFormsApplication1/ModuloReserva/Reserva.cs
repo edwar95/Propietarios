@@ -19,6 +19,7 @@ namespace WindowsFormsApplication1
         private string fechaInicio;
         private string fechaFin;
         private string estado;
+        private int idSolicitante;
         ConexionSQL coneccion;
         Viaje viaje;
 
@@ -124,6 +125,8 @@ namespace WindowsFormsApplication1
             }
         }
 
+        public int IdSolicitante { get => idSolicitante; set => idSolicitante = value; }
+
         public bool confirmarViaje()
         {
             
@@ -131,9 +134,6 @@ namespace WindowsFormsApplication1
             viaje.asignarChofer(this.NumeroPersonas);
             viaje.asignarVehiculo(this.NumeroPersonas);
 
-            Notificacion notificacion = new Notificacion();
-            notificacion.NotificacionReserva = "reserva realizada";
-            MessageBox.Show("Reserva realizada", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             if(viaje.validarChoferVehiculo(viaje.asignarChofer(this.NumeroPersonas), viaje.asignarVehiculo(this.NumeroPersonas)))
             {
