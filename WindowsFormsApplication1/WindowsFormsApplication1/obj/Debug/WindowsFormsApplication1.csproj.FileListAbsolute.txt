@@ -25,6 +25,7 @@ C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFor
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\Isaac\Source\Repos\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojAssemblyReference.cache
 C:\Users\Isaac\Source\Repos\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\Isaac\Source\Repos\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ModuloFormularios.FrmCalificacionServicio.resources
@@ -105,4 +106,7 @@ C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFor
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.OpcionesAutoridad.resources
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.solicitudesPendientes.resources
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Formulario.resources
+=======
+C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojAssemblyReference.cache
+>>>>>>> Grupo1(Módulo-reservas)
 C:\Users\david\Documents\GitHub\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CoreCompileInputs.cache
