@@ -125,7 +125,18 @@ namespace WindowsFormsApplication1
             }
         }
 
-        public int IdSolicitante { get => idSolicitante; set => idSolicitante = value; }
+        public int IdSolicitante
+        {
+            get
+            {
+                return idSolicitante;
+            }
+
+            set
+            {
+                idSolicitante = value;
+            }
+        }
 
         public bool confirmarViaje()
         {
@@ -146,9 +157,9 @@ namespace WindowsFormsApplication1
 
         public void registrarReservaAprovada()
         {
-            this.estado = "aprobado";
+            this.estado = "aprobada2";
             coneccion.Conectar();
-            SqlCommand cmd = new SqlCommand("INSERT INTO RESERVAAPROBADA (IDCHOFER,IDVEHICULO,IDMOTIVOVIAJE,IDCATEGORIAUSUARIO,NUMEROPERSONAS,FECHASALIDA,FECHARETORNO,ESTADOSOLICITUD) VALUES (" + viaje.Chofer.IdChofer+ "," + viaje.Vehiculo.IdVehiculo + "," + this.idMotivoViaje +"," + this.idCategoriaUsuario + "," + this.numeroPersonas + ",convert(datetime, '" + this.fechaInicio + "', 102),convert(datetime, '" + this.fechaFin + "', 102), '" + this.estado+"') ", coneccion.getConnection());
+            SqlCommand cmd = new SqlCommand("INSERT INTO RESERVAAPROBADA ( IDCHOFER,IDVEHICULO,IDMOTIVOVIAJE,IDCATEGORIAUSUARIO,NUMEROPERSONAS,FECHASALIDA,FECHARETORNO,ESTADOSOLICITUD) VALUES (" + viaje.Chofer.IdChofer+ "," + viaje.Vehiculo.IdVehiculo + "," + this.idMotivoViaje +"," + this.idCategoriaUsuario + "," + this.numeroPersonas +",convert(datetime, '" + this.fechaInicio + "', 102),convert(datetime, '" + this.fechaFin + "', 102), '" + this.estado+ "') ", coneccion.getConnection());
             cmd.ExecuteNonQuery();
             coneccion.Desconectar();
 

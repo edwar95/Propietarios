@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                conexion = new SqlConnection("Data Source=localhost,2000;Initial Catalog=SistemaAAP;Persist Security Info=True;User ID=grupoAli;Password=grupoAli");
+                conexion = new SqlConnection("Data Source=172.31.101.33,1433;Initial Catalog=SistemaAAP;Persist Security Info=True;User ID=grupoAli;Password=grupoAli");
                 conexion.Open();
             }
             catch (SqlException e)
