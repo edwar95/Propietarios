@@ -51,13 +51,13 @@ namespace WindowsFormsApplication1
                 MessageBox.Show("no se conecto no hice la consulta");
             }
         }
-        public void CargarDatos( DataGridView tabla)
+        public void CargarDatos( String consulta, DataGridView tabla)
         {
             try
             {
                 DataTable dt2 = new DataTable();
                 cn = new SqlConnection(stringConexion);
-                cmd = new SqlCommand("select * from solicitante", cn);
+                cmd = new SqlCommand(consulta, cn);
                 da = new SqlDataAdapter(cmd);
                 da.Fill(dt2);
                 tabla.DataSource = dt2;
