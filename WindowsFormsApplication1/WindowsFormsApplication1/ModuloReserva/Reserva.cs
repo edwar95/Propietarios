@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -10,12 +11,25 @@ namespace WindowsFormsApplication1
 {
     class Reserva
     {
+
+        private int idReserva;
+        private int idMotivoViaje;
+        private int idCategoriaUsuario;//categoria usuario
         private int numeroPersonas;
-        private string prioridad;
         private string fechaInicio;
         private string fechaFin;
-        
-        
+        private string estado;
+        ConexionSQL coneccion;
+        Viaje viaje;
+
+        public Reserva()
+        {
+            
+            coneccion = new ConexionSQL();
+            viaje = new Viaje();
+
+        }
+
 
         public int NumeroPersonas
         {
@@ -30,18 +44,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        public string Prioridad
-        {
-            get
-            {
-                return prioridad;
-            }
-
-            set
-            {
-                prioridad = value;
-            }
-        }
+        
 
         public string FechaInicio
         {
@@ -69,18 +72,89 @@ namespace WindowsFormsApplication1
             }
         }
 
-        public void confirmarViaje()
+        public string Estado
         {
-            Viaje viaje = new Viaje();
+            get
+            {
+                return estado;
+            }
+
+            set
+            {
+                estado = value;
+            }
+        }
+
+        public int IdReserva
+        {
+            get
+            {
+                return idReserva;
+            }
+
+            set
+            {
+                idReserva = value;
+            }
+        }
+
+        public int IdMotivoViaje
+        {
+            get
+            {
+                return idMotivoViaje;
+            }
+
+            set
+            {
+                idMotivoViaje = value;
+            }
+        }
+
+        public int IdCategoriaUsuario
+        {
+            get
+            {
+                return idCategoriaUsuario;
+            }
+
+            set
+            {
+                idCategoriaUsuario = value;
+            }
+        }
+
+        public bool confirmarViaje()
+        {
+            
+            viaje.asignarFecha(this.FechaInicio, this.FechaFin);
             viaje.asignarChofer(this.NumeroPersonas);
             viaje.asignarVehiculo(this.NumeroPersonas);
-            viaje.asignarFecha(this.FechaInicio, this.FechaFin);
 
             Notificacion notificacion = new Notificacion();
             notificacion.NotificacionReserva = "reserva realizada";
             MessageBox.Show("Reserva realizada", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            if(viaje.validarChoferVehiculo(viaje.asignarChofer(this.NumeroPersonas), viaje.asignarVehiculo(this.NumeroPersonas)))
+            {
+                registrarReservaAprovada();
+            }
+
+            return viaje.validarChoferVehiculo(viaje.asignarChofer(this.NumeroPersonas), viaje.asignarVehiculo(this.NumeroPersonas));
+
+        }
+
+        public void registrarReservaAprovada()
+        {
+            this.estado = "aprobado";
+            coneccion.Conectar();
+            SqlCommand cmd = new SqlCommand("INSERT INTO RESERVAAPROBADA (IDCHOFER,IDVEHICULO,IDMOTIVOVIAJE,IDCATEGORIAUSUARIO,NUMEROPERSONAS,FECHASALIDA,FECHARETORNO,ESTADOSOLICITUD) VALUES (" + viaje.Chofer.IdChofer+ "," + viaje.Vehiculo.IdVehiculo + "," + this.idMotivoViaje +"," + this.idCategoriaUsuario + "," + this.numeroPersonas + ",convert(datetime, '" + this.fechaInicio + "', 102),convert(datetime, '" + this.fechaFin + "', 102), '" + this.estado+"') ", coneccion.getConnection());
+            cmd.ExecuteNonQuery();
+            coneccion.Desconectar();
+
         }
         
+
 
     }
 }

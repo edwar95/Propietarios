@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -8,172 +9,160 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-	class Viaje
-	{
-		Fecha fechaAux = new Fecha();
-		private string tipoVehiculo;
-		private string chofer;
+    class Viaje
+    {
+        Fecha fecha;
+        Vehiculo vehiculo;
+        Chofer chofer;
+        ConexionSQL coneccion;
 
-		public string TipoVehiculo
-		{
-			get
-			{
-				return tipoVehiculo;
-			}
+        internal Chofer Chofer
+        {
+            get
+            {
+                return chofer;
+            }
 
-			set
-			{
-				tipoVehiculo = value;
-			}
-		}
+            set
+            {
+                chofer = value;
+            }
+        }
 
-		public string Chofer
-		{
-			get
-			{
-				return chofer;
-			}
+        internal Vehiculo Vehiculo
+        {
+            get
+            {
+                return vehiculo;
+            }
 
-			set
-			{
-				chofer = value;
-			}
-		}
+            set
+            {
+                vehiculo = value;
+            }
+        }
 
+        public Viaje()
+        {
+            fecha = new Fecha();
+            Vehiculo = new Vehiculo();
+            Chofer = new Chofer();
+            coneccion = new ConexionSQL();
 
-		public void asignarChofer(int NumeroPersonas)
-		{
+        }
 
-			Chofer chofer = new Chofer();
-			int cont = 0;
+        public bool asignarChofer(int NumeroPersonas)
+        {
 
-			if (NumeroPersonas <= 5)
-			{
+            coneccion.Conectar();
 
-				foreach (string line in File.ReadLines(@"Choferes.txt"))
-				{
-					Char delimiter = ';';
-					String[] substrings = line.Split(delimiter);
+            if (NumeroPersonas <= 5)
+            {
+                SqlCommand cmd = new SqlCommand("select * from CHOFER where TIPOLICENCIA = 'B' and IDCHOFER not in (select IDCHOFER from RESERVAAPROBADA where (convert(datetime, '" + fecha.FechaInicio+ "', 102) between FECHASALIDA and FECHARETORNO) and(convert(datetime, '" + fecha.FechaFin + "', 102) between FECHASALIDA and FECHARETORNO) )", coneccion.getConnection());
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (!reader.Read())
+                {
+                    Console.WriteLine("No hay choferes disponibles");
+                }
+                else
+                {
+                    Chofer.IdChofer = reader.GetInt32(0);
+                    Chofer.NombreChofer = reader.GetString(3);
+                    Chofer.ApellidoChofer = reader.GetString(2);
+                    Chofer.CedulaChofer = reader.GetString(1);
+                    return true;
+                }
+                coneccion.Desconectar();
+            }
+            else if (NumeroPersonas > 5)
+            {
+                SqlCommand cmd = new SqlCommand("select * from CHOFER where TIPOLICENCIA = 'C' and IDCHOFER not in (select IDCHOFER from RESERVAAPROBADA where (convert(datetime, '" + fecha.FechaInicio + "', 102)between FECHASALIDA and FECHARETORNO) and(convert(datetime, '" + fecha.FechaFin + "', 102)between FECHASALIDA and FECHARETORNO) )", coneccion.getConnection());
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (!reader.Read())
+                {
+                    Console.WriteLine("No hay choferes disponibles");
+                }
+                else
+                {
+                    Chofer.IdChofer = reader.GetInt32(0);
+                    Chofer.NombreChofer = reader.GetString(3);
+                    Chofer.ApellidoChofer = reader.GetString(2);
+                    Chofer.CedulaChofer = reader.GetString(1);
+                    return true;
+                }
+                coneccion.Desconectar();
 
-					if (substrings[1] == "B" && cont == 0)
-					{
-						chofer.NombreChofer = substrings[0];
-						chofer.TipoLicencia = substrings[1];
-						cont += 1;
-					}
+            }
+            return false;
 
-				}
-			}
-			else if (NumeroPersonas > 5)
-			{
-
-				foreach (string line in File.ReadLines(@"Choferes.txt"))
-				{
-					Char delimiter = ';';
-					String[] substrings = line.Split(delimiter);
-
-					if (substrings[1] == "C" && cont == 0)
-					{
-						chofer.NombreChofer = substrings[0];
-						chofer.TipoLicencia = substrings[1];
-						cont += 1;
-					}
-
-				}
-			}
-			string lineAux = chofer.NombreChofer + ";" + chofer.TipoLicencia + ";";
-			Console.WriteLine(chofer.NombreChofer + chofer.TipoLicencia);
-			File.AppendAllText(@"reservacion.txt", lineAux);
-		}
-
-		public void asignarVehiculo(int NumeroPersonas)
-		{
-			Vehiculo vehiculo = new Vehiculo();
-			int cont = 0;
-
-			if (NumeroPersonas <= 5)
-			{
-
-				foreach (string line in File.ReadLines(@"vehiculo.txt"))
-				{
-					Char delimiter = ';';
-					String[] substrings = line.Split(delimiter);
-
-					if (substrings[1] == "auto" && cont == 0)
-					{
-						vehiculo.Tipo = substrings[1];
-						vehiculo.Placa = substrings[0];
-						cont += 1;
-					}
-				}
-			}
-			else if (NumeroPersonas > 5)
-			{
-
-				foreach (string line in File.ReadLines(@"vehiculo.txt"))
-				{
-					Char delimiter = ';';
-					String[] substrings = line.Split(delimiter);
-
-					if (substrings[1] == "bus" && cont == 0)
-					{
-						vehiculo.Tipo = substrings[1];
-						vehiculo.Placa = substrings[0];
-						cont += 1;
-					}
-
-				}
-			}
-			Console.WriteLine(vehiculo.Placa + vehiculo.Tipo);
-			string lineAux = vehiculo.Tipo + ";" + vehiculo.Placa + ";";
-			File.AppendAllText(@"reservacion.txt", lineAux);
-		}
-
-		public void asignarFecha(string fechaInicio, string fechaFin)
-		{
-			Fecha fecha = new Fecha();
-			fecha.FechaInicio = fechaInicio;
-			fecha.FechaFin = fechaFin;
-
-			fechaAux = fecha;
-			string lineAux = fecha.FechaInicio + ";" + fecha.FechaFin + System.Environment.NewLine;
-			File.AppendAllText(@"reservacion.txt", lineAux);
-
-		}
-
-		private bool verificarDisponibilidadVehiculo(string fechaInicio, string fechaFin, string placa)
-		{
-			bool disponibilidad = false;
-			Char delim_1 = '-';
-
-			string auxIni = fechaInicio;
-			String[] auxIni_ = auxIni.Split(delim_1);
-
-			string auxFin = fechaFin;
-			String[] auxFin_ = auxFin.Split(delim_1);
+        }
 
 
-			foreach (string line in File.ReadLines(@"reservacion.txt"))
-			{
-				Char delimiter = ';';
-				String[] substrings = line.Split(delimiter);
+        public bool asignarVehiculo(int NumeroPersonas)
+        {
+            coneccion.Conectar();
 
+            if (NumeroPersonas <= 5)
+            {
+                SqlCommand cmd = new SqlCommand("select * from VEHICULO where TIPOVEHICULO = 'auto' and IDVEHICULO not in (select IDVEHICULO from RESERVAAPROBADA where (convert(datetime, '" + fecha.FechaInicio + "', 102)between FECHASALIDA and FECHARETORNO) and(convert(datetime, '" + fecha.FechaFin + "', 102)between FECHASALIDA and FECHARETORNO) )", coneccion.getConnection());
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (!reader.Read())
+                {
+                    Console.WriteLine("No hay vehiculos disponibles");
+                }
+                else
+                {
+                    Vehiculo.IdVehiculo = reader.GetInt32(0);
+                    Vehiculo.Tipo = reader.GetString(1);
+                    Vehiculo.Placa = reader.GetString(2);
+                    return true;
+                }
+                coneccion.Desconectar();
 
-				string inicio = substrings[4];
-				String[] subsInicio = inicio.Split(delim_1);
+            }
+            else if (NumeroPersonas > 5)
+            {
+                SqlCommand cmd = new SqlCommand("select * from VEHICULO where TIPOVEHICULO = 'bus' and IDVEHICULO not in (select IDVEHICULO from RESERVAAPROBADA where (convert(datetime, '" + fecha.FechaInicio + "', 102)between FECHASALIDA and FECHARETORNO) and(convert(datetime, '" + fecha.FechaFin + "', 102)between FECHASALIDA and FECHARETORNO) )", coneccion.getConnection());
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (!reader.Read())
+                {
+                    Console.WriteLine("No hay vehiculos disponibles");
+                }
+                else
+                {
+                    Vehiculo.IdVehiculo = reader.GetInt32(0);
+                    Vehiculo.Tipo = reader.GetString(1);
+                    Vehiculo.Placa = reader.GetString(2);
+                    return true;
+                }
+                coneccion.Desconectar();
 
-				string fin = substrings[5];
-				String[] subsFin = fin.Split(delim_1);
+            }
 
-				if (placa == substrings[3] && Convert.ToInt32(subsInicio[2]) > Convert.ToInt32(auxIni_[2]))
-				{
-					disponibilidad = false;
-				}
+            Console.WriteLine(Vehiculo.Placa);
+            return false;
+        }
+            
 
-			}
+        public void asignarFecha(string fechaInicio, string fechaFin)
+        {
 
-			return disponibilidad;
-		}
+            fecha.FechaInicio = fechaInicio;
+            fecha.FechaFin = fechaFin;
 
-	}
+        }
+
+        public bool validarChoferVehiculo(bool chofer, bool vehiculo )
+        {
+
+            if (chofer && vehiculo)
+            {
+                return true;
+            }
+
+            return false;
+
+        }
+
+    }
 }
