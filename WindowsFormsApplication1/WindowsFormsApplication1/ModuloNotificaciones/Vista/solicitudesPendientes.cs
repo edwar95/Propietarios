@@ -25,6 +25,7 @@ namespace WindowsFormsApplication1
             MessageBox.Show(x);
             Conexion cn = new Conexion();
             cn.query("update solicitudreserva set estadosolicitud='aprobada1' where idsolicitudreserva='" + x + "'");
+            Correo correo = new Correo();
 
         }
 
